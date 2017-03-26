@@ -7,6 +7,6 @@
 
 ## Process
 - Instrument the code to call custom libc functions which are sys call wrappers.
-- After every step see increase in coverage. (TODO: find open source tool that tells coverage percentage)    
-- 
-- In the end, give a text based simple report that summarizes faults injected and
+- The program wrapper would use the instrumentation to run the different branches of the program and check coverage for each iteration.
+- After every iteration see increase in coverage. (TODO: find open source tool that tells coverage percentage)  
+- Converge at a point such that you could obtain a good coverage and give a text based simple report that summarizes faults injected and which lines of code are vulnerable.
