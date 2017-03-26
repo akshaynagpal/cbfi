@@ -16,6 +16,7 @@
 
 **03-26-2017**
 <hr>
+
 ### strace
 Can use `strace <path/to/executable>` to find out what system calls are being called by the program.    
 
