@@ -10,3 +10,10 @@
 - The program wrapper would use the instrumentation to run the different branches of the program and check coverage for each iteration.
 - After every iteration see increase in coverage. (TODO: find open source tool that tells coverage percentage)  
 - Converge at a point such that you could obtain a good coverage and give a text based simple report that summarizes faults injected and which lines of code are vulnerable.
+
+
+---------------------------
+
+Can use strace <path/to/executable> to find out what system calls are being called by the program.
+
+Strace "strace -i <path/to/executable>" also prints that the instruction pointer of the code from where the syscall in invoked which will help us in getting the relative location of where the syscall is being invoked in the program and thus would be able to provide us information about which syscall is invoked(i.e. 1st, 2nd, 3rd etc.)
