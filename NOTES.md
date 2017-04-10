@@ -1,5 +1,16 @@
 # NOTES
 
+**04-09-2017**
+<hr>
+
+Might shift to using ltrace instead of strace.
+ltrace gives trace of library calls made by the program
+sltrace gives trace of system calls made by the program
+
+Since we are writing library call wrappers. We would be essentially be failing library calls and not system calls. In such scenario, ltrace would give more info about library calls made by the program.
+
+`ltrace -i <path/toexecutable>` would give lists of library calls along with the instruction pointer information of code which makes call to the library.
+
 **03-25-2017**
 <hr>
 
