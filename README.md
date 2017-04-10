@@ -1,2 +1,2 @@
-# cbfi_secure
-Coverage based fault injection
+# Coverage Based Fault Injection
+Coverage based fault injection.
