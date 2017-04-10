@@ -17,11 +17,11 @@ lcount:4,1
 lcount:5,1
 
 
-The gcov is generated in the format 
-file:source_file_name
-function:line_number,execution_count,function_name
-lcount:line number,execution_count
-branch:line_number,branch_coverage_type
+The gcov is generated in the format    
+file:source_file_name    
+function:line_number,execution_count,function_name    
+lcount:line number,execution_count    
+branch:line_number,branch_coverage_type    
 
 Source: https://gcc.gnu.org/onlinedocs/gcc/Invoking-Gcov.html#Invoking-Gcov
 
