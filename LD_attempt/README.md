@@ -17,7 +17,8 @@ lcount:4,1
 lcount:5,1
 
 
-The gcov is generated in the format    
+The above out of gcov is generated in the format:    
+
 file:source_file_name    
 function:line_number,execution_count,function_name    
 lcount:line number,execution_count    
