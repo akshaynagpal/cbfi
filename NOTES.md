@@ -1,5 +1,11 @@
 # NOTES
 
+**04-23-2017**
+
+Stdin and Stdout are by default buffered. Can be disabled stdbuf -i0 -o0 -e0.
+
+-fno-builtin is the flag in gcc to disable printf converted to puts. GCC has mechasnism of builtin and which is not related to any optimizations disabled by -O0.
+
 **04-09-2017**
 <hr>
 
