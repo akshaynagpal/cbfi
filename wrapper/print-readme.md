@@ -1,11 +1,11 @@
 ## Instructions for LD_PRELOAD
-gcc -shared -fPIC custom_lib.c -o custom_lib.so -ldl    
+gcc -shared -fPIC wrap-printf.c -o wrap-printf.so -ldl    
 gcc helloworld.c -o helloworld    
-LD_PRELOAD=$PWD/custom_lib.so ./helloworld     
+LD_PRELOAD=$PWD/wrap-printf.so ./helloworld     
 
 ## Instructions for gcov
 gcc -fprofile-arcs -ftest-coverage helloworld.c -o helloworld    
-LD_PRELOAD=$PWD/custom_lib.so ./helloworld    
+LD_PRELOAD=$PWD/wrap-printf.so ./helloworld    
 gcov -i helloworld.c    
 
 This generates a file called helloworld.c.gcov which has the following output:
