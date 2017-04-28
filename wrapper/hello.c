@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+void flush_gcov(){
+    __gcov_flush();
+}
+
 int main(){
     int x = 2;
     FILE *fp;

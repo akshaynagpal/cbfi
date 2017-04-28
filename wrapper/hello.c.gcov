@@ -1,0 +1,13 @@
+file:hello.c
+function:3,1,flush_gcov
+function:7,1,main
+lcount:3,1
+lcount:4,1
+lcount:5,0
+lcount:7,1
+lcount:8,1
+lcount:10,1
+lcount:11,1
+lcount:12,0
+lcount:13,0
+lcount:14,0
