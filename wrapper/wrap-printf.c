@@ -14,6 +14,7 @@ int printf(const char *format, ...){
 	int done;
 	va_start (arg, format);
   	done = vfprintf (stdout,format, arg);
+  	// done = orig_printf(format,arg);
 	va_end (arg);
 	return done;
 	// return orig_printf("ERROR!");	// whatever the user gives, it prints error only
