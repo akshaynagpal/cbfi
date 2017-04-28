@@ -18,5 +18,4 @@ int printf(const char *format, ...){
 	va_end (arg);
 	return done;
 	// return orig_printf("ERROR!");	// whatever the user gives, it prints error only
-	// return done;
 }

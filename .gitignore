@@ -2,5 +2,5 @@
 *.o
 *.gcno
 *.gcda
-
+*.exe
 hello
