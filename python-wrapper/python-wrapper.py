@@ -27,33 +27,36 @@ responses = gdb_read(gdb_controller=gdbmi)
 pprint(responses)
 print("\n\n")
 
-gdbmi.write('br main', timeout_sec=100, read_response=False)
+gdbmi.write('set environment LD_PRELOAD=../wrapper/wrap-fopen.so', read_response=False)
+
+"""
+We will be setting the environment variables for failing libc calls over here
+"""
+gdbmi.write('set environment FOPEN_FAIL=2', read_response=False)
+
+gdbmi.write('br main', read_response=False)
 responses = gdb_read(gdb_controller=gdbmi)
 pprint(responses)
 print("\n\n")
 
-gdbmi.write('run', timeout_sec=100, read_response=False)
+gdbmi.write('run', read_response=False)
 responses = gdb_read(gdb_controller=gdbmi)
 pprint(responses)
 print("\n\n")
 
-gdbmi.write('next', timeout_sec=100, read_response=False)
+gdbmi.write('next', read_response=False)
 responses = gdb_read(gdb_controller=gdbmi)
 pprint(responses)
 print("\n\n")
 
-gdbmi.write('next', timeout_sec=100, read_response=False)
+gdbmi.write('call flush_gcov()', read_response=False)
+
+gdbmi.write('next', read_response=False)
 responses = gdb_read(gdb_controller=gdbmi)
 pprint(responses)
 print("\n\n")
 
-gdbmi.write('call flush_gcov()', timeout_sec=100, read_response=False)
-
-response = gdbmi.write('next', timeout_sec=100, read_response=False)
-responses = gdb_read(gdb_controller=gdbmi)
-pprint(responses)
-print("\n\n")
-
-gdbmi.write('call flush_gcov()', timeout_sec=100, read_response=False)
 
 gdbmi.exit()
+
+_
