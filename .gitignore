@@ -1,6 +1,11 @@
-*.so
-*.o
-*.gcno
-*.gcda
-*.exe
-hello
+# Disallow all files
+*
+
+# Allow following files
+!LICENSE
+!*.pdf
+!*.c
+!*.h
+!*.py
+!*.md
+!*.txt
