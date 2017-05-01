@@ -1,5 +1,22 @@
 # NOTES
 
+**04-30-2017**
+
+To get the coverage of the executable file we decided to use gcov. After further research,  we found out that the gcda file is generated after the program exits normally and the gcda file is generated from the atexit function. While testing by failing libc calls, we found out that the program ends abruptly and no gcda file is flushed and we are not able to get any coverage for the lines of execution for the program. Further research using [1],  showed that the gcda  file can be created dynamically at runtime using __gcov_flush() function.
+
+Since we wanted to flush the coverage to the gcda file after execution of every source code line, we made the design choice to run the test program inside the gdb, so that we could execute the program line-by-line using the "next" command of gdb and then use the "call" command to call __gcov_flush() function that would flush the coverage to the gcda file.
+
+Thus, we are able to get the coverage before any abrupt termination of our program and we can carry out coverage based fault injection.
+
+Second design choice was to write a program-wrapper that would run and communicate with gdb and the test program would be executed inside that gdb. We have used a python program as wrapper and used the pygdbmi library [2] that allows us seamless communication with gdb. We would be using -intepreter=mi2 flag  which allows to communicate to the gdb using GDB/MI interface [3] which is a line based machine oriented text interface to GDB. This is the because the format of response obtained from machine interface is much simpler and easier to interpret and modern IDE like Eclipse, Netbeans and GNU Emacs use this interface while in debugging mode to run our programs in debug mode.  
+
+Third design choice was of passing information to libc calls about which calls to fail. We decided to used system ENVIRONMENT VARIABLES as a medium to pass information from the python-wrapper to the libc calls. Thus, python program which executing gdb, sets the required environment variables inside the GDB about which system calls to fail. Similarly, the LD_PRELOAD flag is set as an environment variable in gdb to run the given program with our custom library.
+
+Reference:
+[1] http://www.osadl.org/Dumping-gcov-data-at-runtime-simple-ex.online-coverage-analysis.0.html
+[2] https://pypi.python.org/pypi/pygdbmi/
+[3] https://sourceware.org/gdb/onlinedocs/gdb/GDB_002fMI.html
+
 **04-23-2017**
 
 Stdin and Stdout are by default buffered. Can be disabled stdbuf -i0 -o0 -e0.
