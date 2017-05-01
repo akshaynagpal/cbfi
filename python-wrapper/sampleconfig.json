@@ -1,0 +1,6 @@
+{
+	"SOURCE_FILE_PATH":"../tests/hello.c",
+	"SOURCE_FILE_NAME":"hello.c",
+	"EXECUTABLE":"../tests/hello",
+	"FAIL_CALL":"FOPEN"
+}

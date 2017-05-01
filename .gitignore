@@ -10,6 +10,7 @@
 !*.md
 !*.txt
 !Makefile
+!*.json
 
 #Allow even if in subdirectories
 !*/
