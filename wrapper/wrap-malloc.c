@@ -10,8 +10,11 @@ typedef void* (*orig_malloc_type)(size_t size);
 
 void *malloc(size_t size){
 	char* fail_num = getenv("MALLOC_FAIL");
-    if (fail_num != NULL && atol(fail_num) == global_counts.malloc)
-        return NULL;
+    if (fail_num != NULL){
+        ++global_counts.malloc;
+        if (atol(fail_num) == global_counts.malloc)
+            return NULL;
+    };
 
     // normal malloc
 	orig_malloc_type orig_malloc;
