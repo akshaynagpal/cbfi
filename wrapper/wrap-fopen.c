@@ -1,23 +1,13 @@
-/*
- * custom fopen wrapper
+/**
  *
- */
+ * fopen() wrapper
+ *
+ **/
 
-#define _GNU_SOURCE
-#include <dlfcn.h>
-#include <stdio.h>
-#include <errno.h>
-#include <stdlib.h>
+#include "wrapper.h"
 
-// struct to maintain counts of calls
-typedef struct
-{
-    long fopen;
-    long printf;
-} call_counts;
-
-// global counts of each call
-static call_counts global_counts;
+// see wrapper.h for more info  on call_counts
+call_counts global_counts;
 
 // typedef for fopen
 typedef FILE* (*orig_fopen_t)(const char *path, const char *mode);

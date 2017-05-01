@@ -1,16 +1,10 @@
-#define _GNU_SOURCE
+/**
+ *
+ * malloc wrapper
+ *
+ **/
 
-#include <dlfcn.h>
-#include <stdlib.h>
-
-// struct to maintain counts of calls
-typedef struct
-{
-    long malloc;
-} call_counts;
-
-// global counts of each call
-static call_counts global_counts;
+#include "wrapper.h"
 
 typedef void* (*orig_malloc_type)(size_t size);
 

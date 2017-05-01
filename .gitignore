@@ -9,3 +9,4 @@
 !*.py
 !*.md
 !*.txt
+!Makefile
