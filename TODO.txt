@@ -1,26 +1,26 @@
 https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
-calloc
-chdir
-chmod
-chown
-close
-connect
+calloc				MEMORY
+chdir				DIRECTORY
+chmod				FILE
+chown				FILE
+close				FILE
+connect				SOCKET
 
-dup
-dup2
+dup 				PROCESS
+dup2				PROCESS
 
 #endnetent
-getnetbyname
-getnetbyaddr
-getnetent
+getnetbyname		SOCKET
+getnetbyaddr		SOCKET
+getnetent			SOCKET
 
-execv
-execvp
-execve
+execv   			PROCESS
+execvp				PROCESS
+execve				PROCESS
 
-fclose
-fgetc
+fclose				FILE
+fgetc				
 fgets
 fopen
 fork
