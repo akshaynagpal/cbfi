@@ -20,8 +20,8 @@ execvp				PROCESS
 execve				PROCESS
 
 fclose				FILE
-fgetc				
-fgets
+fgetc				FILE
+fgets				
 fopen
 fork
 fprintf
