@@ -1,6 +1,6 @@
 /**
  *
- * close() wrapper
+ * fclose() wrapper
  *
  **/
 

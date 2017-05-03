@@ -5,7 +5,7 @@
 
 int main(int argc, char const *argv[])
 {
+	exit(ENOMEM);
 	printf("exiting here..\n");
-	exit(EIO);
 	return 0;
 }

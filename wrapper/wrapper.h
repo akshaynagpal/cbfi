@@ -27,6 +27,7 @@ typedef struct
     unsigned long open;
     unsigned long close;
     unsigned long fclose;
+    unsigned long fgetc;
 } call_counts;
 
 /**

@@ -19,8 +19,8 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - execvp			
 - execve			
 
-- fclose   [COREUTIL]		
-- fgetc   [COREUTIL]				
+- ~~fclose~~   [COREUTIL]		
+- ~~fgetc~~   [COREUTIL]				
 - fgets   [COREUTIL]				
 - ~~fopen~~
 - fork
