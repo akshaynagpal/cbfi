@@ -1,84 +1,84 @@
 https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
-~~calloc~~ 				MEMORY
-~~chdir~~				DIRECTORY
-chmod				FILE
-chown				FILE
-close				FILE
-connect				SOCKET
+- ~~calloc~~
+- ~~chdir~~		
+- chmod				
+- chown				
+- close				
+- connect				
 
-dup 				PROCESS
-dup2				PROCESS
+- dup 				PROCESS
+- dup2				PROCESS
 
-#endnetent
-getnetbyname		SOCKET
-getnetbyaddr		SOCKET
-getnetent			SOCKET
+- #endnetent
+- getnetbyname		SOCKET
+- getnetbyaddr		SOCKET
+- getnetent			SOCKET
 
-execv   			PROCESS
-execvp				PROCESS
-execve				PROCESS
+- execv   			PROCESS
+- execvp				PROCESS
+- execve				PROCESS
 
-fclose				FILE
-fgetc				FILE
-fgets				
-~~fopen~~
-fork
-fprintf
-fputc
-fputs
-free
-fread
-fseek
-fscanf
-fwrite
+- fclose				FILE
+- fgetc				FILE
+- fgets				
+- ~~fopen~~
+- fork
+- fprintf
+- fputc
+- fputs
+- free
+- fread
+- fseek
+- fscanf
+- fwrite
 
-getc
-gets
-gethostbyname
-gethostbyaddr
-getpid
-getwd
-getumask
+- getc
+- gets
+- gethostbyname
+- gethostbyaddr
+- getpid
+- getwd
+- getumask
 
-kill
+- kill
 
-listen
-lseek
+- listen
+- lseek
 
-~~malloc~~
-memcmp
-memcpy
-mkdir
-mount - (temporary)
+- ~~malloc~~
+- memcmp
+- memcpy
+- mkdir
+- mount - (temporary)
 
-open
-opendir
+- open
+- opendir
 
-pclose
-pipe
-popen
-~~printf~~
-putc
-puts
+- pclose
+- pipe
+- popen
+- ~~printf~~
+- putc
+- puts
 
-read
-remove
-rename
-recv
-rmdir
+- read
+- remove
+- rename
+- recv
+- rmdir
 
-scanf
-sched_getaffinity
-sched_setaffinity
-send
-socket
-system
+- scanf
+- sched_getaffinity
+- sched_setaffinity
+- send
+- socket
+- system
 
-umask
-umount
-umount2
+- umask
+- umount
+- umount2
 
-wait
-waitpid
-write
+- wait
+- waitpid
+- write
