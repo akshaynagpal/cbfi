@@ -4,7 +4,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~chdir~~		
 - chmod				
 - chown				
-- close				
+- ~~close~~				
 - ~~connect~~				
 
 - dup 				
