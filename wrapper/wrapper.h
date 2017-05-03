@@ -26,6 +26,7 @@ typedef struct
     unsigned long connect;
     unsigned long open;
     unsigned long close;
+    unsigned long fclose;
 } call_counts;
 
 /**

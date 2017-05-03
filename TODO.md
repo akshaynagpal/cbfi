@@ -19,22 +19,22 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - execvp			
 - execve			
 
-- fclose			
-- fgetc				
-- fgets				
+- fclose   [COREUTIL]		
+- fgetc   [COREUTIL]				
+- fgets   [COREUTIL]				
 - ~~fopen~~
 - fork
-- fprintf
-- fputc
-- fputs
-- free
-- fread
-- fseek
-- fscanf
-- fwrite
+- fprintf   [COREUTIL]
+- fputc   [COREUTIL]
+- fputs   [COREUTIL]
+- free   [COREUTIL]
+- fread   [COREUTIL]
+- fseek   [COREUTIL]
+- fscanf   [COREUTIL]
+- fwrite   [COREUTIL]
 
-- getc
-- gets
+- getc   [COREUTIL]
+- gets   [COREUTIL]
 - gethostbyname
 - gethostbyaddr
 - getpid
@@ -48,19 +48,19 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
 - ~~malloc~~
 - memcmp
-- memcpy
+- memcpy   [COREUTIL]
 - mkdir
 - mount - (temporary)
 
-- open
+- ~~open~~   [COREUTIL]
 - opendir
 
 - pclose
 - pipe
 - popen
-- ~~printf~~
+- ~~printf~~   [COREUTIL]
 - putc
-- puts
+- puts   [COREUTIL]
 
 - read
 - remove
