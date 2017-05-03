@@ -5,22 +5,22 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - chmod				
 - chown				
 - close				
-- connect				
+- ~~connect~~				
 
-- dup 				PROCESS
-- dup2				PROCESS
+- dup 				
+- dup2				
 
 - #endnetent
-- getnetbyname		SOCKET
-- getnetbyaddr		SOCKET
-- getnetent			SOCKET
+- getnetbyname		
+- getnetbyaddr		
+- getnetent			
 
-- execv   			PROCESS
-- execvp				PROCESS
-- execve				PROCESS
+- execv   			
+- execvp			
+- execve			
 
-- fclose				FILE
-- fgetc				FILE
+- fclose			
+- fgetc				
 - fgets				
 - ~~fopen~~
 - fork

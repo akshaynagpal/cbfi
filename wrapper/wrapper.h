@@ -12,6 +12,8 @@
 #include <stdarg.h>
 #include <errno.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <sys/socket.h>
 
 // struct to maintain counts of calls
 typedef struct
@@ -21,6 +23,7 @@ typedef struct
     unsigned long malloc;
     unsigned long calloc;
     unsigned long chdir;
+    unsigned long connect;
 } call_counts;
 
 /**
