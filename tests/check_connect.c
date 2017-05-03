@@ -6,11 +6,10 @@
 #include <string.h>
 
 int main(int argc, char *argv[]) {
-   int sockfd, portno, n;
+   int sockfd, portno;
    struct sockaddr_in serv_addr;
    struct hostent *server;
    int x;
-   char buffer[256];
 	
    portno = 80;  // port number
    
