@@ -11,6 +11,7 @@
 int main(){
     int x=open("testopen.txt",O_APPEND|O_CREAT);
     assert(x!=-1);
-    close(x);
+    int y = close(x);
+    assert(y!=-1);
     return 0;
 }

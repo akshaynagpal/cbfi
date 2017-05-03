@@ -25,6 +25,7 @@ typedef struct
     unsigned long chdir;
     unsigned long connect;
     unsigned long open;
+    unsigned long close;
 } call_counts;
 
 /**
