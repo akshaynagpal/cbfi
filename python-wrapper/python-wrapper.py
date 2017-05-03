@@ -90,11 +90,11 @@ if __name__ == "__main__":
 
 	while True:
 
-		gdbmi = GdbController(gdb_args=[executable,'-nx','--quiet', '-interpreter=mi2'])
+		gdbmi = GdbController(gdb_args=['--args '+executable,'-nx','--quiet', '-interpreter=mi2'])
 
 		responses = gdb_read(gdb_controller=gdbmi)
 
-		gdbmi.write('set environment LD_PRELOAD=../wrapper/wrap-fopen.so', read_response=False)
+		gdbmi.write('set environment LD_PRELOAD=../wrapper/wraplib.so', read_response=False)
 
 		"""
 		We will be setting the environment variables for failing libc calls over here
