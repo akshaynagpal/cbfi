@@ -2,5 +2,6 @@
 	"SOURCE_FILE_PATH":"../tests/hello.c",
 	"SOURCE_FILE_NAME":"hello.c",
 	"EXECUTABLE":"../tests/hello",
+	"ARGUMENTS":"",
 	"FAIL_CALL":"FOPEN"
 }
