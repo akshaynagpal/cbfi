@@ -40,6 +40,13 @@ def get_linecount_string(out, source_file_name, abrupt):
 			break
 	return exec_count
 
+def should_not_proceed(allexecutions, exec_string):
+	last2_execs = allexecutions[-2:]
+
+	if len(last2_execs) == 2 and exec_string == last2_execs[0] and exec_string == last2_execs[1]:
+		return True
+	else:
+		return False
 
 libc_mapping = {
 	'FOPEN':'FOPEN_FAIL'
@@ -76,12 +83,11 @@ if __name__ == "__main__":
 
 	current_run = 1
 
-	exec_set = set()
+	all_executions = list()
+
 	error_lines = []
 
 	while True:
-
-		call_num_to_fail += 1
 
 		gdbmi = GdbController(gdb_args=[executable,'-nx','--quiet', '-interpreter=mi2'])
 
@@ -138,6 +144,8 @@ if __name__ == "__main__":
 
 		process = subprocess.Popen(['gcov', '-i', source_file_path], stdout=subprocess.PIPE)
 		out, err = process.communicate()
+
+		#print out
 		
 		with open('{0}.{1}'.format(source_file_name,'gcov'), 'r') as gcovfile:
 			gcovdata = gcovfile.read().split('\n')
@@ -150,13 +158,17 @@ if __name__ == "__main__":
 
 		# Delete gcov file
 		subprocess.call(['rm', '{0}.{1}'.format(source_file_name,'gcov')])
+
+		print exec_string
 		
 		if abrupt:
 			error_lines.append(current_lineno)
 
-		if exec_string in exec_set:
+		if should_not_proceed(all_executions, exec_string):
 			break
-		else:
-			exec_set.add(exec_string)
+
+		all_executions.append(exec_string)
 
 		current_run += 1
+
+	print error_lines
