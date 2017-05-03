@@ -1,0 +1,6 @@
+{
+	"SOURCE_FILE_PATH":"../coreutils/src/cat.c",
+	"SOURCE_FILE_NAME":"cat.c",
+	"EXECUTABLE":"../coreutils/src/cat",
+	"FAIL_CALL":"OPEN"
+}

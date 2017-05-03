@@ -49,7 +49,8 @@ def should_not_proceed(allexecutions, exec_string):
 		return False
 
 libc_mapping = {
-	'FOPEN':'FOPEN_FAIL'
+	'FOPEN':'FOPEN_FAIL',
+	'OPEN': 'OPEN_FAIL'
 }
 
 
