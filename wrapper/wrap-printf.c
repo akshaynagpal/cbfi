@@ -15,7 +15,7 @@ int printf(const char *format, ...){
         ++global_counts.printf;
         if (atol(fail_num) == global_counts.printf)
             return -1;
-    };
+    }
 	va_list arg;
 	int done;
 	va_start (arg, format);

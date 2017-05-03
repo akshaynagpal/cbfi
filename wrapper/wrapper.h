@@ -20,6 +20,7 @@ typedef struct
     unsigned long printf;
     unsigned long malloc;
     unsigned long calloc;
+    unsigned long chdir;
 } call_counts;
 
 /**

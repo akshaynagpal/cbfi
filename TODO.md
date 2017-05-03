@@ -1,7 +1,7 @@
 https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
-calloc				MEMORY
-chdir				DIRECTORY
+~~calloc~~ 				MEMORY
+~~chdir~~				DIRECTORY
 chmod				FILE
 chown				FILE
 close				FILE
@@ -22,7 +22,7 @@ execve				PROCESS
 fclose				FILE
 fgetc				FILE
 fgets				
-fopen
+~~fopen~~
 fork
 fprintf
 fputc
@@ -46,7 +46,7 @@ kill
 listen
 lseek
 
-malloc
+~~malloc~~
 memcmp
 memcpy
 mkdir
@@ -58,7 +58,7 @@ opendir
 pclose
 pipe
 popen
-printf
+~~printf~~
 putc
 puts
 
