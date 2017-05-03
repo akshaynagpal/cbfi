@@ -4,6 +4,7 @@
 #include <netinet/in.h>
 #include <assert.h>
 #include <string.h>
+#include "cbfi.h"
 
 int main(int argc, char *argv[]) {
    int sockfd, portno;
