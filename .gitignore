@@ -1,5 +1,6 @@
 # Disallow all files
 *
+coreutils/
 
 # Allow following files
 !LICENSE
@@ -11,6 +12,7 @@
 !*.txt
 !Makefile
 !*.json
+!coreutils-8.27.tar.xz
 
 #Allow even if in subdirectories
 !*/
