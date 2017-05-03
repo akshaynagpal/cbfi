@@ -24,6 +24,7 @@ typedef struct
     unsigned long calloc;
     unsigned long chdir;
     unsigned long connect;
+    unsigned long open;
 } call_counts;
 
 /**
