@@ -14,7 +14,7 @@ void *calloc(size_t nelem,size_t elsize) {
         ++global_counts.calloc;
         if (atol(fail_num) == global_counts.calloc)
             return NULL;
-    };
+    }
 
 	// normal calloc
 	orig_calloc_type orig_calloc;

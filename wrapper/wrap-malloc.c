@@ -1,6 +1,6 @@
 /**
  *
- * malloc wrapper
+ * malloc() wrapper
  *
  **/
 
@@ -14,8 +14,8 @@ void *malloc(size_t size){
         ++global_counts.malloc;
         if (atol(fail_num) == global_counts.malloc)
             return NULL;
-    };
-
+    }
+    
     // normal malloc
 	orig_malloc_type orig_malloc;
 	orig_malloc = (orig_malloc_type)dlsym(RTLD_NEXT,"malloc");
