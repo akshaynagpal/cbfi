@@ -13,8 +13,7 @@ int fgetc(FILE *stream){
     if (fail_num != NULL){
         ++global_counts.fgetc;
         if (atol(fail_num) == global_counts.fgetc)
-        	errno = ENOMEM; 
-            exit(ENOMEM);
+        	errno = ENOMEM;
             return EOF;
     }
     orig_fgetc_type orig_fgetc;

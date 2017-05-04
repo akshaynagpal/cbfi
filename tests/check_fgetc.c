@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <errno.h>
 int main ()
 {
    FILE *fp;
@@ -15,7 +15,7 @@ int main ()
    do
    {
       c = fgetc(fp);
-      if( feof(fp) )
+      if( c==EOF )
       {
          break ;
       }
