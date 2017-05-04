@@ -1,0 +1,7 @@
+{
+	"SOURCE_FILE_PATH":"../tests/check-malloc.c",
+	"SOURCE_FILE_NAME":"check-malloc.c",
+	"EXECUTABLE":"../tests/check-malloc",
+	"ARGUMENTS":"",
+	"FAIL_CALL":"MALLOC"
+}

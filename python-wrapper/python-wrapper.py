@@ -145,7 +145,8 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 libc_mapping = {
 	'FOPEN':'FOPEN_FAIL',
 	'OPEN': 'OPEN_FAIL',
-	'FGETC': 'FGETC_FAIL'
+	'FGETC': 'FGETC_FAIL',
+	'MALLOC': 'MALLOC_FAIL'
 }
 
 
