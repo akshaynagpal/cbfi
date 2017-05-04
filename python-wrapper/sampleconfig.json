@@ -1,7 +1,7 @@
 {
-	"SOURCE_FILE_PATH":"../tests/hello.c",
-	"SOURCE_FILE_NAME":"hello.c",
-	"EXECUTABLE":"../tests/hello",
+	"SOURCE_FILE_PATH":"../tests/check-fopen.c",
+	"SOURCE_FILE_NAME":"check-fopen.c",
+	"EXECUTABLE":"../tests/check-fopen",
 	"ARGUMENTS":"",
 	"FAIL_CALL":"FOPEN"
 }

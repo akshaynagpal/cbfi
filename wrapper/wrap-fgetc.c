@@ -6,9 +6,6 @@
 
 #include "wrapper.h"
 
-// see wrapper.h for more info  on call_counts
-call_counts global_counts;
-
 typedef int (*orig_fgetc_type)(FILE *stream);
 
 int fgetc(FILE *stream){

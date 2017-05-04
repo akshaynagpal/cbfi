@@ -8,7 +8,7 @@
 #include <string.h>
 
 // see wrapper.h for more info  on call_counts
-call_counts global_counts;
+/*call_counts global_counts;
 
 typedef int (*orig_open_type)(const char *pathname, int flags);
 
@@ -29,4 +29,4 @@ int open(const char *pathname, int flags){
     orig_open_type orig_open;
     orig_open = (orig_open_type)dlsym(RTLD_NEXT, "open");
     return orig_open(pathname, flags);
-}
+}*/

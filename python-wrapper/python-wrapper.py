@@ -71,7 +71,7 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 
 	responses = gdb_read(gdb_controller=gdbmi)
 
-	gdbmi.write('set environment LD_PRELOAD=../wrapper/wrap-fgetc.so', read_response=False)
+	gdbmi.write('set environment LD_PRELOAD=../wrapper/wraplib.so', read_response=False)
 
 	
 	#We will be setting the environment variables for failing libc calls over here
