@@ -1,6 +1,7 @@
 {
 	"SOURCE_FILE_PATH":"../coreutils/src/cat.c",
 	"SOURCE_FILE_NAME":"cat.c",
-	"EXECUTABLE":"../coreutils/src/cat ~/Desktop/a.c",
+	"EXECUTABLE":"../coreutils/src/cat",
+	"ARGUMENTS":"~/Desktop/string",
 	"FAIL_CALL":"OPEN"
 }

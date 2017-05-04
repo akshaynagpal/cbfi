@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <errno.h>
+#include "cbfi.h"
+
 int main ()
 {
    FILE *fp;

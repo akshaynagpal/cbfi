@@ -1,3 +1,4 @@
+from __future__ import division
 from pygdbmi.gdbcontroller import GdbController
 from pprint import pprint
 import sys
@@ -58,20 +59,26 @@ def should_not_proceed(allexecutions, exec_string):
 def do_processing(executable, arguments, source_file_name, source_file_path, call_to_fail, call_nums_to_fail):
 
 	exec_args = arguments.split(" ")
+	if len(exec_args) != 0:
+		gdb_exec_args = ['-nx','--quiet', '-interpreter=mi2', '--args', executable] + exec_args
+	else:
+		gdb_exec_args = ['-nx','--quiet', '-interpreter=mi2', '--args', executable]
 
-	gdb_exec_args = ['-nx','--quiet', '-interpreter=mi2', '--args', executable] + exec_args
+
+	#print gdb_exec_args
 
 	gdbmi = GdbController(gdb_args=gdb_exec_args)
 
 	responses = gdb_read(gdb_controller=gdbmi)
 
-	gdbmi.write('set environment LD_PRELOAD=../wrapper/wrap-fopen.so', read_response=False)
+	gdbmi.write('set environment LD_PRELOAD=../wrapper/wrap-fgetc.so', read_response=False)
 
 	
 	#We will be setting the environment variables for failing libc calls over here
 
 	call_nums = ','.join(map(str,call_nums_to_fail))
 	gdbmi.write('set environment {0}={1}'.format(call_to_fail, call_nums), read_response=False)
+	#print 'set environment {0}={1}'.format(call_to_fail, call_nums)
 
 	gdbmi.write('br main', read_response=False)
 	responses = gdb_read(gdb_controller=gdbmi)
@@ -92,7 +99,7 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 
 		gdbmi.write('next', read_response=False)
 		responses = gdb_read(gdb_controller=gdbmi)
-
+		#print "test"
 		#pprint(responses)
 		#print("\n\n")
 
@@ -107,6 +114,9 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 				abrupt = True
 			elif response['message'] =='stopped' and response['payload']['reason'] == 'exited-normally':
 				break_outer = True
+			elif response['message'] =='stopped' and response['payload']['reason'] == 'exited':
+				break_outer = True
+
 
 		
 		if break_outer:
@@ -134,7 +144,8 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 
 libc_mapping = {
 	'FOPEN':'FOPEN_FAIL',
-	'OPEN': 'OPEN_FAIL'
+	'OPEN': 'OPEN_FAIL',
+	'FGETC': 'FGETC_FAIL'
 }
 
 
@@ -146,7 +157,7 @@ if __name__ == "__main__":
 
 	configfilename = sys.argv[1]
 
-	with open(configfilename,'rb+') as configfile:
+	with open(configfilename,'r') as configfile:
 		contents = configfile.read()
 
 	config_json = json.loads(contents)
@@ -193,8 +204,8 @@ if __name__ == "__main__":
 		elif not abrupt:
 			lines = len(exec_string)
 			zeroes = exec_string.count('0')
-			ones = exec_string.count('1')
-			coverage = (ones - zeroes) / lines
+			coverage = (lines - zeroes) / lines
+			print lines, zeroes, coverage
 
 			queue.append(
 				{
