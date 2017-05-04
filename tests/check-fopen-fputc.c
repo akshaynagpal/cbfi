@@ -8,10 +8,13 @@ int main(){
     fp1=fopen("foo.txt","w+");
     assert(fp1!=NULL);
     fprintf(fp1,"hello world");
+    int r = fputc('a',fp1);
+    if (r == 'a') {
+        r = fputc('b', fp1);
+        if(r == 'b') {
+            printf("Hola");
+        }
+    }
     int z = fclose(fp1);
-    int *x = (int*)malloc(sizeof(int));
-    *x = 5;
-    int *y = (int*)malloc(sizeof(int));
-    *y = 5;
     return 0;
 }

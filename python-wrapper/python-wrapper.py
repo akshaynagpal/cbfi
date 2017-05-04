@@ -49,14 +49,27 @@ def should_not_proceed(allexecutions, exec_string):
 		return True
 	else:
 		return False"""
-	last_exec = allexecutions[-1:]
+	last_exec = allexecutions[-2:]
 
-	if len(last_exec) == 1 and exec_string == last_exec[0]:
+	if exec_string in last_exec:
 		return True
+	#if len(last_exec) == 1 and exec_string == last_exec[0]:
+	#	return True
 	else:
 		return False
 
-def do_processing(executable, arguments, source_file_name, source_file_path, call_to_fail, call_nums_to_fail):
+def create_new_call_fail_dictionary(calls_failed, call, current_max_call):
+	new_call_fail_dict = dict(calls_failed)
+	if call in new_call_fail_dict:
+		new_call_fail_dict[call].append(current_max_call)
+	else:
+		new_call_fail_dict[call] = [current_max_call]
+
+	return new_call_fail_dict
+
+
+
+def do_processing(executable, arguments, source_file_name, source_file_path, call_fail_dict):
 
 	error_lineno = -1
 
@@ -75,14 +88,13 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 
 	gdbmi.write('set environment LD_PRELOAD={0}'.format(library), read_response=False)
 
-	print "Failing" 
-	print call_to_fail
-	print call_nums_to_fail
-	
-	#We will be setting the environment variables for failing libc calls over here
-	call_nums = ','.join(map(str,call_nums_to_fail))
-	gdbmi.write('set environment {0}={1}'.format(call_to_fail, call_nums), read_response=False)
-	#print 'set environment {0}={1}'.format(call_to_fail, call_nums)
+	print "\n",call_fail_dict
+
+	for call, fail_nums in call_fail_dict.iteritems():
+		#We will be setting the environment variables for failing libc calls over here
+		call_nums = ','.join(map(str, fail_nums))
+		gdbmi.write('set environment {0}={1}'.format(call, call_nums), read_response=False)
+		#print 'set environment {0}={1}'.format(call_to_fail, call_nums)
 
 	gdbmi.write('br main', read_response=False)
 	responses = gdb_read(gdb_controller=gdbmi)
@@ -153,7 +165,8 @@ libc_mapping = {
 	'FOPEN':'FOPEN_FAIL',
 	'OPEN': 'OPEN_FAIL',
 	'FGETC': 'FGETC_FAIL',
-	'MALLOC': 'MALLOC_FAIL'
+	'MALLOC': 'MALLOC_FAIL',
+	'FPUTC':'FPUTC_FAIL'
 }
 
 
@@ -172,7 +185,7 @@ if __name__ == "__main__":
 
 	config_json = json.loads(contents)
 
-	if 'FAIL_CALL' not in config_json \
+	if 'FAIL_CALLS' not in config_json \
 		or 'SOURCE_FILE_PATH' not in config_json \
 		or 'SOURCE_FILE_NAME' not in config_json \
 		or 'ARGUMENTS' not in config_json \
@@ -182,15 +195,16 @@ if __name__ == "__main__":
 		exit()
 
 	# TODO: Write check in fail is in mapping
-	fail_call = config_json['FAIL_CALL']
-	call_to_fail = libc_mapping[fail_call]
+	fail_calls = config_json['FAIL_CALLS']
+	calls_to_fail = []
+	for call in fail_calls:
+		calls_to_fail.append(libc_mapping[call])
 	source_file_path = config_json['SOURCE_FILE_PATH']
 	source_file_name = config_json['SOURCE_FILE_NAME']
 	executable = config_json['EXECUTABLE']
 	arguments = config_json['ARGUMENTS']
 	library = config_json['LIBRARY_PATH']
-	call_num_to_fail = 0
-
+	
 	current_run = 1
 
 	all_executions = list()
@@ -199,63 +213,21 @@ if __name__ == "__main__":
 
 	queue = deque()
 
-	while True:
-
-		call_num_to_fail += 1
-
-		exec_string, abrupt, error_lineno = do_processing(executable, arguments, source_file_name, source_file_path, call_to_fail, [call_num_to_fail])
-
-		print "Coverage",exec_string
-	
-		if abrupt and error_lineno != -1:
-			error_lines.append(error_lineno)
-
-		if should_not_proceed(all_executions, exec_string):
-			break
-		elif not abrupt:
-			lines = len(exec_string)
-			zeroes = exec_string.count('0')
-			coverage = (lines - zeroes) / lines
-			print lines, zeroes, coverage
-
-			queue.append(
-				{
-					'call_fail':call_to_fail,
-					'call_num':[call_num_to_fail],
-					'coverage':coverage
-				}
-			)
-
-		all_executions.append(exec_string)
-
-		current_run += 1
-
-		
-
-	print "\nQueue:",queue
-	print "\nCheck lines:", error_lines
-	
-	while len(queue) != 0:
-
-		queue_item = queue.pop()
-
-		current_call_fail = queue_item['call_fail']
-		current_call_fail_nums = queue_item['call_num']
-		current_max_call = current_call_fail_nums[-1]
+	for call_to_fail in calls_to_fail:
+		call_num_to_fail = 0
 
 		while True:
-			
-			current_max_call += 1
 
-			call_fails = current_call_fail_nums + [current_max_call]
+			call_num_to_fail += 1
 
-			exec_string, abrupt, error_lineno = do_processing(executable, arguments, source_file_name, source_file_path, call_to_fail, call_fails)
+			call_fail_dict = {		call_to_fail:[call_num_to_fail]		}
 
+			exec_string, abrupt, error_lineno = do_processing(executable, arguments, \
+				source_file_name, source_file_path, call_fail_dict)
 			print "Coverage",exec_string
-		
+
 			if abrupt and error_lineno != -1:
 				error_lines.append(error_lineno)
-
 			if should_not_proceed(all_executions, exec_string):
 				break
 			elif not abrupt:
@@ -263,20 +235,71 @@ if __name__ == "__main__":
 				zeroes = exec_string.count('0')
 				coverage = (lines - zeroes) / lines
 				print lines, zeroes, coverage
-
 				queue.append(
 					{
-						'call_fail':call_to_fail,
-						'call_num':call_fails,
+						'calls':{
+							call_to_fail : [call_num_to_fail]
+						},
 						'coverage':coverage
 					}
 				)
+				print "Added"
 
 			all_executions.append(exec_string)
 
 			current_run += 1
 
-			print queue
+		del all_executions[:]	
+		
 
+	#print "\nQueue:",queue
+	#print "\nCheck lines:", error_lines
+	
+	while len(queue) != 0:
+
+		queue_item = queue.popleft()
+
+		calls_failed = queue_item['calls']
+
+		for call in calls_to_fail:
+
+			if call in calls_failed.keys():
+				current_max_call = calls_failed[call][-1]
+			else:
+				current_max_call = 0
+
+			while True:
+				current_max_call += 1
+
+				new_call_fail_dict = create_new_call_fail_dictionary(calls_failed, call, current_max_call)
+
+				exec_string, abrupt, error_lineno = do_processing(executable, arguments, source_file_name, source_file_path, new_call_fail_dict)
+
+				print "Coverage",exec_string
+			
+				if abrupt and error_lineno != -1:
+					error_lines.append(error_lineno)
+
+				if should_not_proceed(all_executions, exec_string):
+					break
+				elif not abrupt:
+					lines = len(exec_string)
+					zeroes = exec_string.count('0')
+					coverage = (lines - zeroes) / lines
+					print lines, zeroes, coverage
+
+					queue.append(
+						{
+							'calls':new_call_fail_dict,
+							'coverage':coverage
+						}
+					)
+					print "Added"
+
+				all_executions.append(exec_string)
+
+				current_run += 1
+
+	print "Executions", current_run
 	print "\nQueue:",queue
 	print "\nCheck lines:", error_lines

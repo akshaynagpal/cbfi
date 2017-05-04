@@ -13,10 +13,10 @@ call_counts global_counts;
 typedef FILE* (*orig_fopen_t)(const char *path, const char *mode);
 
 FILE *fopen(const char *path, const char *mode){
-
 	char* fail_nums = getenv("FOPEN_FAIL");
 
     if (fail_nums != NULL){
+	printf("failing fopen");
     	++global_counts.fopen;
 
 	    // Note: strtok requires the a char* or char[] 

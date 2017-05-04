@@ -4,5 +4,5 @@
 	"EXECUTABLE":"../tests/check-fopen",
 	"ARGUMENTS":"",
 	"FAIL_CALL":"FOPEN",
-	"LIBRARY_PATH":"../wrapper/wrap-fopen.so"
+	"LIBRARY_PATH":"../final-wrapper/wraplib.so"
 }
