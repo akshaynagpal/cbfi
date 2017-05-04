@@ -5,7 +5,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - chmod				
 - chown				
 - ~~close~~				
-- ~~connect~~				
+- ~~connect~~
 
 - dup 				
 - dup2				
@@ -25,7 +25,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~fopen~~
 - fork
 - fprintf   [COREUTIL]
-- fputc   [COREUTIL]
+- ~~fputc~~  [COREUTIL]
 - fputs   [COREUTIL]
 - free   [COREUTIL]
 - fread   [COREUTIL]
