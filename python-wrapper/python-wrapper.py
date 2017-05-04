@@ -58,6 +58,8 @@ def should_not_proceed(allexecutions, exec_string):
 
 def do_processing(executable, arguments, source_file_name, source_file_path, call_to_fail, call_nums_to_fail):
 
+	error_lineno = -1
+
 	exec_args = arguments.split(" ")
 	if len(exec_args) != 0:
 		gdb_exec_args = ['-nx','--quiet', '-interpreter=mi2', '--args', executable] + exec_args
@@ -71,11 +73,13 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 
 	responses = gdb_read(gdb_controller=gdbmi)
 
-	gdbmi.write('set environment LD_PRELOAD=../wrapper/wraplib.so', read_response=False)
+	gdbmi.write('set environment LD_PRELOAD={0}'.format(library), read_response=False)
 
+	print "Failing" 
+	print call_to_fail
+	print call_nums_to_fail
 	
 	#We will be setting the environment variables for failing libc calls over here
-
 	call_nums = ','.join(map(str,call_nums_to_fail))
 	gdbmi.write('set environment {0}={1}'.format(call_to_fail, call_nums), read_response=False)
 	#print 'set environment {0}={1}'.format(call_to_fail, call_nums)
@@ -107,15 +111,18 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 			if response['message'] == 'stopped' \
 				and response['payload']['reason'] == 'end-stepping-range' \
 				and response['payload']['frame']['file'] == source_file_name:
-				current_lineno = int(response['payload']['frame']['line'])
-
+				error_lineno = int(response['payload']['frame']['line'])
+				#pprint(response)
 			elif response['message'] == 'stopped' and response['payload']['reason'] == 'exited-signalled':
 				break_outer = True
 				abrupt = True
+				#pprint(response)
 			elif response['message'] =='stopped' and response['payload']['reason'] == 'exited-normally':
 				break_outer = True
+				#pprint(response)
 			elif response['message'] =='stopped' and response['payload']['reason'] == 'exited':
 				break_outer = True
+				#pprint(response)
 
 
 		
@@ -140,7 +147,7 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 	# Delete gcov file
 	subprocess.call(['rm', '{0}.{1}'.format(source_file_name,'gcov')])
 
-	return (exec_string, abrupt)
+	return (exec_string, abrupt, error_lineno)
 
 libc_mapping = {
 	'FOPEN':'FOPEN_FAIL',
@@ -151,6 +158,8 @@ libc_mapping = {
 
 
 if __name__ == "__main__":
+
+	global library
 
 	if len(sys.argv) < 2:
 		print "Usage: python python-wrapper <config.json>"
@@ -167,6 +176,7 @@ if __name__ == "__main__":
 		or 'SOURCE_FILE_PATH' not in config_json \
 		or 'SOURCE_FILE_NAME' not in config_json \
 		or 'ARGUMENTS' not in config_json \
+		or 'LIBRARY_PATH' not in config_json \
 		or 'EXECUTABLE' not in config_json :
 		print "Incorrect format: Refer to sampleconfig.json for correct format"
 		exit()
@@ -178,6 +188,7 @@ if __name__ == "__main__":
 	source_file_name = config_json['SOURCE_FILE_NAME']
 	executable = config_json['EXECUTABLE']
 	arguments = config_json['ARGUMENTS']
+	library = config_json['LIBRARY_PATH']
 	call_num_to_fail = 0
 
 	current_run = 1
@@ -192,13 +203,12 @@ if __name__ == "__main__":
 
 		call_num_to_fail += 1
 
-		exec_string, abrupt = do_processing(executable, arguments, source_file_name, source_file_path, call_to_fail, [call_num_to_fail])
+		exec_string, abrupt, error_lineno = do_processing(executable, arguments, source_file_name, source_file_path, call_to_fail, [call_num_to_fail])
 
-		print exec_string
+		print "Coverage",exec_string
 	
-		if abrupt:
-			#error_lines.append(current_lineno)
-			pass
+		if abrupt and error_lineno != -1:
+			error_lines.append(error_lineno)
 
 		if should_not_proceed(all_executions, exec_string):
 			break
@@ -222,17 +232,51 @@ if __name__ == "__main__":
 
 		
 
-	print "Queue:",queue
-	print "Check lines:", error_lines
-	"""
+	print "\nQueue:",queue
+	print "\nCheck lines:", error_lines
+	
 	while len(queue) != 0:
+
 		queue_item = queue.pop()
 
 		current_call_fail = queue_item['call_fail']
-		current_call_fail_num = queue_item['call_num']
-		max_call = current_call_fail[-1:]
+		current_call_fail_nums = queue_item['call_num']
+		current_max_call = current_call_fail_nums[-1]
 
-		#while True:
+		while True:
+			
+			current_max_call += 1
 
-	print "Queue:",queue
-	print "Check lines:", error_lines"""
+			call_fails = current_call_fail_nums + [current_max_call]
+
+			exec_string, abrupt, error_lineno = do_processing(executable, arguments, source_file_name, source_file_path, call_to_fail, call_fails)
+
+			print "Coverage",exec_string
+		
+			if abrupt and error_lineno != -1:
+				error_lines.append(error_lineno)
+
+			if should_not_proceed(all_executions, exec_string):
+				break
+			elif not abrupt:
+				lines = len(exec_string)
+				zeroes = exec_string.count('0')
+				coverage = (lines - zeroes) / lines
+				print lines, zeroes, coverage
+
+				queue.append(
+					{
+						'call_fail':call_to_fail,
+						'call_num':call_fails,
+						'coverage':coverage
+					}
+				)
+
+			all_executions.append(exec_string)
+
+			current_run += 1
+
+			print queue
+
+	print "\nQueue:",queue
+	print "\nCheck lines:", error_lines

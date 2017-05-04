@@ -1,0 +1,8 @@
+{
+	"SOURCE_FILE_PATH":"../tests/check-fopen-malloc.c",
+	"SOURCE_FILE_NAME":"check-fopen-malloc.c",
+	"EXECUTABLE":"../tests/check-fopen-malloc",
+	"ARGUMENTS":"",
+	"FAIL_CALL":"MALLOC",
+	"LIBRARY_PATH":"../final-wrapper/wraplib.so"
+}

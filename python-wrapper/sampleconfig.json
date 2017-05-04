@@ -3,5 +3,6 @@
 	"SOURCE_FILE_NAME":"check-fopen.c",
 	"EXECUTABLE":"../tests/check-fopen",
 	"ARGUMENTS":"",
-	"FAIL_CALL":"FOPEN"
+	"FAIL_CALL":"FOPEN",
+	"LIBRARY_PATH":"../wrapper/wrap-fopen.so"
 }
