@@ -11,10 +11,17 @@ typedef int (*orig_chdir_type)(const char *path);
 int chdir(const char *path){
 
 	char* fail_num = getenv("CHDIR_FAIL");
+
     if (fail_num != NULL){
         ++global_counts.chdir;
-        if (atol(fail_num) == global_counts.chdir)
-            return -1;
+        char *num;
+        num = strtok(fail_num,",");
+        while(num != NULL){
+            if (atol(fail_num) == global_counts.chdir){
+                return -1;
+            }
+            num = strtok(NULL,",");
+        }
     }
 
     // normal chdir

@@ -13,8 +13,15 @@ int printf(const char *format, ...){
 	char* fail_num = getenv("PRINTF_FAIL");
     if (fail_num != NULL){
         ++global_counts.printf;
-        if (atol(fail_num) == global_counts.printf)
-            return -1;
+        char *num;
+        num = strtok(fail_num,",");
+       	while(num!=NULL){
+       		if (atol(fail_num) == global_counts.printf){
+            	return -1;
+        	}	
+        	num = strtok(NULL,",");
+       	}
+        
     }
 	va_list arg;
 	int done;

@@ -13,9 +13,15 @@ int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen){
 	char* fail_num = getenv("CONNECT_FAIL");
     if (fail_num != NULL){
         ++global_counts.connect;
-        if (atol(fail_num) == global_counts.connect){
-            return -1;
+        char *num;
+        num = strtok(fail_num,",");
+        while(num != NULL){
+            if (atol(fail_num) == global_counts.connect){
+                return -1;
+            }
+            num = strtok(NULL,",");
         }
+
     }
 
     // normal connect

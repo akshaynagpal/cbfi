@@ -12,8 +12,14 @@ void *calloc(size_t nelem,size_t elsize) {
     char* fail_num = getenv("CALLOC_FAIL");
     if (fail_num != NULL){
         ++global_counts.calloc;
-        if (atol(fail_num) == global_counts.calloc)
-            return NULL;
+        char *num;
+        num = strtok(fail_num,",");
+        while(num != NULL){
+            if (atol(fail_num) == global_counts.calloc){
+                return NULL;
+            }
+            num = strtok(NULL,",");
+        }    
     }
 
 	// normal calloc

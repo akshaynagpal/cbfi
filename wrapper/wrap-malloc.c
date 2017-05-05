@@ -10,16 +10,16 @@ typedef void* (*orig_malloc_type)(size_t size);
 
 void *malloc(size_t size){
 printf("Malloc");
-	char* fail_nums = getenv("MALLOC_FAIL");
+	char* fail_num = getenv("MALLOC_FAIL");
 
-    if (fail_nums != NULL){
+    if (fail_num != NULL){
     	++global_counts.malloc;
 
 	    // Note: strtok requires the a char* or char[] 
 	    // that it can modify and const char* won't work
     	char *num;
     	// Should we use strtok_r which is thread safe?: 
-		num = strtok(fail_nums,",");
+		num = strtok(fail_num,",");
 		while(num != NULL){
 			if (atol(num) == global_counts.malloc)
             	return NULL;
