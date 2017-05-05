@@ -5,6 +5,8 @@ import sys
 import json
 import subprocess
 from collections import deque
+from sets import Set
+from copy import deepcopy
 
 """
 Using pygdbmi.
@@ -42,13 +44,36 @@ def get_linecount_string(out, source_file_name, abrupt):
 			break
 	return exec_count
 
+
+def should_not_proceed(coverage_dict):
+
+	call_fail_dict = coverage_dict['calls']
+	cov_str = coverage_dict['coverage']
+
+	print call_fail_dict
+	print cov_str
+
+	for exec_dict in storage_of_execution:
+		not_proceed = True
+		if exec_dict['coverage'] == cov_str:
+			for call, call_fails in call_fail_dict.iteritems():
+				if call in exec_dict['calls'] and not exec_dict['calls'][call].issubset(call_fails):
+					not_proceed = False
+					break
+
+			if not_proceed:
+				return not_proceed
+
+	return False
+
+"""
 def should_not_proceed(allexecutions, exec_string):
-	"""last2_execs = allexecutions[-2:]
+	last2_execs = allexecutions[-2:]
 
 	if len(last2_execs) == 2 and exec_string == last2_execs[0] and exec_string == last2_execs[1]:
 		return True
 	else:
-		return False"""
+		return False
 	last_exec = allexecutions[-2:]
 
 	if exec_string in last_exec:
@@ -56,14 +81,15 @@ def should_not_proceed(allexecutions, exec_string):
 	#if len(last_exec) == 1 and exec_string == last_exec[0]:
 	#	return True
 	else:
-		return False
+		return False"""
 
 def create_new_call_fail_dictionary(calls_failed, call, current_max_call):
-	new_call_fail_dict = dict(calls_failed)
+
+	new_call_fail_dict = deepcopy(calls_failed)
 	if call in new_call_fail_dict:
-		new_call_fail_dict[call].append(current_max_call)
+		new_call_fail_dict[call].add(current_max_call)
 	else:
-		new_call_fail_dict[call] = [current_max_call]
+		new_call_fail_dict[call] = Set([current_max_call])
 
 	return new_call_fail_dict
 
@@ -173,6 +199,8 @@ libc_mapping = {
 if __name__ == "__main__":
 
 	global library
+	global storage_of_execution
+	storage_of_execution = []
 
 	if len(sys.argv) < 2:
 		print "Usage: python python-wrapper <config.json>"
@@ -209,7 +237,7 @@ if __name__ == "__main__":
 
 	all_executions = list()
 
-	error_lines = []
+	error_lines = set()
 
 	queue = deque()
 
@@ -220,26 +248,34 @@ if __name__ == "__main__":
 
 			call_num_to_fail += 1
 
-			call_fail_dict = {		call_to_fail:[call_num_to_fail]		}
+			call_fail_dict = {		call_to_fail:Set([call_num_to_fail])		}
 
 			exec_string, abrupt, error_lineno = do_processing(executable, arguments, \
 				source_file_name, source_file_path, call_fail_dict)
 			print "Coverage",exec_string
 
 			if abrupt and error_lineno != -1:
-				error_lines.append(error_lineno)
-			if should_not_proceed(all_executions, exec_string):
+				error_lines.add(error_lineno)
+
+			coverage_dict = {
+				'calls':call_fail_dict,
+				'coverage':exec_string
+			}
+			# Currently not sure is should keep all_executions or all_executions[-1:]
+			# for performance benefits
+			if exec_string in all_executions:
+				print "Not adding"
+				storage_of_execution.append(coverage_dict)
 				break
-			elif not abrupt:
+			else:
+				storage_of_execution.append(coverage_dict)
 				lines = len(exec_string)
 				zeroes = exec_string.count('0')
 				coverage = (lines - zeroes) / lines
 				print lines, zeroes, coverage
 				queue.append(
 					{
-						'calls':{
-							call_to_fail : [call_num_to_fail]
-						},
+						'calls':call_fail_dict,
 						'coverage':coverage
 					}
 				)
@@ -249,11 +285,9 @@ if __name__ == "__main__":
 
 			current_run += 1
 
+		# For Single calls clear execution_strings
 		del all_executions[:]	
 		
-
-	#print "\nQueue:",queue
-	#print "\nCheck lines:", error_lines
 	
 	while len(queue) != 0:
 
@@ -264,7 +298,7 @@ if __name__ == "__main__":
 		for call in calls_to_fail:
 
 			if call in calls_failed.keys():
-				current_max_call = calls_failed[call][-1]
+				current_max_call = max(calls_failed[call])
 			else:
 				current_max_call = 0
 
@@ -272,17 +306,25 @@ if __name__ == "__main__":
 				current_max_call += 1
 
 				new_call_fail_dict = create_new_call_fail_dictionary(calls_failed, call, current_max_call)
-
+				
 				exec_string, abrupt, error_lineno = do_processing(executable, arguments, source_file_name, source_file_path, new_call_fail_dict)
 
 				print "Coverage",exec_string
 			
 				if abrupt and error_lineno != -1:
-					error_lines.append(error_lineno)
+					error_lines.add(error_lineno)
 
-				if should_not_proceed(all_executions, exec_string):
+				coverage_dict = {
+					'calls':new_call_fail_dict,
+					'coverage':exec_string
+				}
+
+				if should_not_proceed(coverage_dict):
+					print "Not adding"
+					storage_of_execution.append(coverage_dict)
 					break
-				elif not abrupt:
+				else:
+					storage_of_execution.append(coverage_dict)
 					lines = len(exec_string)
 					zeroes = exec_string.count('0')
 					coverage = (lines - zeroes) / lines
