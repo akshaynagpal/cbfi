@@ -46,7 +46,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - listen
 - lseek
 
-- ~~malloc~~
+- malloc [fix-malloc]
 - memcmp
 - memcpy   [COREUTIL]
 - mkdir

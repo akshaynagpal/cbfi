@@ -1,7 +1,7 @@
 {
-	"SOURCE_FILE_PATH":"../tests/check-fopen-fputc.c",
-	"SOURCE_FILE_NAME":"check-fopen-fputc.c",
-	"EXECUTABLE":"../tests/check-fopen-fputc",
+	"SOURCE_FILE_PATH":"../tests/sid-test.c",
+	"SOURCE_FILE_NAME":"sid-test.c",
+	"EXECUTABLE":"../tests/sid-test",
 	"ARGUMENTS":"",
 	"FAIL_CALLS":["FPUTC","FOPEN"],
 	"LIBRARY_PATH":"../final-wrapper/wraplib.so"

@@ -6,7 +6,6 @@
 int main(){
     FILE *fp1;
     fp1=fopen("foo.txt","w+");
-    assert(fp1!=NULL);
     fprintf(fp1,"hello world");
     int r = fputc('a',fp1);
     if (r == 'a') {
@@ -16,5 +15,9 @@ int main(){
         }
     }
     int z = fclose(fp1);
+    /*int *i = (int*)malloc(sizeof(int));
+    *i = 5;
+    int *j = (int*)malloc(sizeof(int));
+    *j = 5;*/
     return 0;
 }
