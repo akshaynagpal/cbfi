@@ -6,7 +6,6 @@ int main ()
 {
    FILE *fp;
    int c;
-   int n = 0;
   
    fp = fopen("file.txt","r");
    if(fp == NULL) 
