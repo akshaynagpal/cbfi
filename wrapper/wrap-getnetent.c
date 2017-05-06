@@ -15,11 +15,11 @@ struct netent *getnetent(void) {
     unsigned int i = 0, length = 0;  // size of numbers array of integers
 
     if (fail_num != NULL) {
-        ++global_counts.dup2;
+        ++global_counts.getnetent;
         length = parse_fail_str(&numbers, fail_num);
         // iterate over numbers array
         for (i = 0; i < length; i++) {
-            if (numbers[i] == global_counts.dup2) {
+            if (numbers[i] == global_counts.getnetent) {
                 error = -1;
                 break;
             }
