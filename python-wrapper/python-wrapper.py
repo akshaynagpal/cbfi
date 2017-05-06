@@ -66,22 +66,6 @@ def should_not_proceed(coverage_dict):
 
 	return False
 
-"""
-def should_not_proceed(allexecutions, exec_string):
-	last2_execs = allexecutions[-2:]
-
-	if len(last2_execs) == 2 and exec_string == last2_execs[0] and exec_string == last2_execs[1]:
-		return True
-	else:
-		return False
-	last_exec = allexecutions[-2:]
-
-	if exec_string in last_exec:
-		return True
-	#if len(last_exec) == 1 and exec_string == last_exec[0]:
-	#	return True
-	else:
-		return False"""
 
 def create_new_call_fail_dictionary(calls_failed, call, current_max_call):
 
@@ -94,7 +78,6 @@ def create_new_call_fail_dictionary(calls_failed, call, current_max_call):
 	return new_call_fail_dict
 
 
-
 def do_processing(executable, arguments, source_file_name, source_file_path, call_fail_dict):
 
 	error_lineno = -1
@@ -104,7 +87,6 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 		gdb_exec_args = ['-nx','--quiet', '-interpreter=mi2', '--args', executable] + exec_args
 	else:
 		gdb_exec_args = ['-nx','--quiet', '-interpreter=mi2', '--args', executable]
-
 
 	#print gdb_exec_args
 
@@ -137,7 +119,7 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 	abrupt =False
 	while(True):
 
-		gdbmi.write('call __gcov_flush()', read_response=False)
+		gdbmi.write('call flush_gcov()', read_response=False)
 
 		gdbmi.write('next', read_response=False)
 		responses = gdb_read(gdb_controller=gdbmi)
@@ -165,7 +147,7 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 
 		
 		if break_outer:
-			gdbmi.write('call __gcov_flush()', read_response=False)
+			gdbmi.write('call flush_gcov()', read_response=False)
 			break
 
 	gdbmi.exit()
@@ -215,7 +197,6 @@ if __name__ == "__main__":
 
 	if 'FAIL_CALLS' not in config_json \
 		or 'SOURCE_FILE_PATH' not in config_json \
-		or 'SOURCE_FILE_NAME' not in config_json \
 		or 'ARGUMENTS' not in config_json \
 		or 'LIBRARY_PATH' not in config_json \
 		or 'EXECUTABLE' not in config_json :
@@ -228,7 +209,7 @@ if __name__ == "__main__":
 	for call in fail_calls:
 		calls_to_fail.append(libc_mapping[call])
 	source_file_path = config_json['SOURCE_FILE_PATH']
-	source_file_name = config_json['SOURCE_FILE_NAME']
+	source_file_name = source_file_path.split("/")[-1]
 	executable = config_json['EXECUTABLE']
 	arguments = config_json['ARGUMENTS']
 	library = config_json['LIBRARY_PATH']

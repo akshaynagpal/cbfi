@@ -1,8 +1,0 @@
-{
-	"SOURCE_FILE_PATH":"../tests/check-fopen.c",
-	"SOURCE_FILE_NAME":"check-fopen.c",
-	"EXECUTABLE":"../tests/check-fopen",
-	"ARGUMENTS":"",
-	"FAIL_CALL":"FOPEN",
-	"LIBRARY_PATH":"../final-wrapper/wraplib.so"
-}

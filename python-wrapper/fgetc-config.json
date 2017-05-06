@@ -1,7 +1,0 @@
-{
-	"SOURCE_FILE_PATH":"../tests/check-fgetc.c",
-	"SOURCE_FILE_NAME":"check-fgetc.c",
-	"EXECUTABLE":"../tests/check-fgetc",
-	"ARGUMENTS":"",
-	"FAIL_CALL":"FGETC"
-}

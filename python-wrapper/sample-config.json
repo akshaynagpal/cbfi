@@ -1,6 +1,5 @@
 {
 	"SOURCE_FILE_PATH":"../tests/sid-test.c",
-	"SOURCE_FILE_NAME":"sid-test.c",
 	"EXECUTABLE":"../tests/sid-test",
 	"ARGUMENTS":"",
 	"FAIL_CALLS":["FPUTC","FOPEN"],
