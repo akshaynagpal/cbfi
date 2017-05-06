@@ -15,7 +15,7 @@ int main(){
         }
     }
     flush_gcov();
-    int z = fclose(fp1);
+    // int z = fclose(fp1);
     int *i = (int*)malloc(sizeof(int));
     if(i == NULL) {
         printf("NULL");
@@ -23,6 +23,6 @@ int main(){
         *i = 5;
         printf("%d",*i);
     }
-    int *j = (int*)malloc(sizeof(int));
+    // int *j = (int*)malloc(sizeof(int));
     return 0;
 }

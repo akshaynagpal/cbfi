@@ -9,7 +9,7 @@
 #include "cbfi.h"
 
 int main(){
-    int x=open("testopen.txt",O_APPEND|O_CREAT);
+    int x=open("opentest1.txt",O_CREAT);
     assert(x!=-1);
     int y = close(x);
     assert(y!=-1);
