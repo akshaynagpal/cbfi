@@ -9,7 +9,6 @@
 typedef void* (*orig_malloc_type)(size_t size);
 
 void *malloc(size_t size){
-printf("Malloc");
 	char* fail_num = getenv("MALLOC_FAIL");
 
     if (fail_num != NULL){
