@@ -16,7 +16,6 @@ FILE *fopen(const char *path, const char *mode){
     char* fail_nums = getenv("FOPEN_FAIL");
 
     if (fail_nums != NULL){
-    printf("failing fopen");
         ++global_counts.fopen;
         // Note: strtok requires the a char* or char[] 
         // that it can modify and const char* won't work

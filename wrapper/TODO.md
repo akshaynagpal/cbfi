@@ -7,13 +7,13 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~close~~				
 - ~~connect~~
 
-- dup 				
-- dup2				
+- ~~dup~~ 				
+- ~~dup2~~				
 
 - #endnetent
-- getnetbyname		
+- getnetbyname
 - getnetbyaddr		
-- getnetent			
+- ~~getnetent~~
 
 - execv   			
 - execvp			
