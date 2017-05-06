@@ -13,17 +13,16 @@ call_counts global_counts;
 typedef FILE* (*orig_fopen_t)(const char *path, const char *mode);
 
 FILE *fopen(const char *path, const char *mode){
-	char* fail_num = getenv("FOPEN_FAIL");
+	char* fail_nums = getenv("FOPEN_FAIL");
 
-    if (fail_num != NULL){
-	printf("failing fopen");
+    if (fail_nums != NULL){
     	++global_counts.fopen;
 
 	    // Note: strtok requires the a char* or char[] 
 	    // that it can modify and const char* won't work
     	char *num;
     	// Should we use strtok_r which is thread safe?: 
-		num = strtok(fail_num,",");
+		num = strtok(fail_nums,",");
 		while(num != NULL){
 			if (atol(num) == global_counts.fopen)
             	return NULL;

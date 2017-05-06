@@ -14,10 +14,15 @@ int main(){
             printf("Hola");
         }
     }
+    flush_gcov();
     int z = fclose(fp1);
-    /*int *i = (int*)malloc(sizeof(int));
-    *i = 5;
+    int *i = (int*)malloc(sizeof(int));
+    if(i == NULL) {
+        printf("NULL");
+    } else {
+        *i = 5;
+        printf("%d",*i);
+    }
     int *j = (int*)malloc(sizeof(int));
-    *j = 5;*/
     return 0;
 }

@@ -9,15 +9,7 @@
 typedef void* (*orig_malloc_type)(size_t size);
 
 void *malloc(size_t size){
-	printf("Malloc");
-	fflush(NULL);
-	/*void *array[10];
-	size_t size_call;
-	printf("Stack Trace Start for\n");
-	size_call = backtrace(array, 10);
-	backtrace_symbols_fd(array, size_call, 2);
-	printf("Stack Trace End\n");
-	char* fail_nums = getenv("MALLOC_FAIL");
+	/*char* fail_nums = getenv("MALLOC_FAIL");
 
     if (fail_nums != NULL){
     	++global_counts.malloc;
