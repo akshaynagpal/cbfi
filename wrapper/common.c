@@ -32,7 +32,7 @@ unsigned int parse_fail_str(unsigned int **numbers, const char *failstr) {
     i = 0;
     num = strtok(numstr, ",");
     while (num != NULL && i < size) {
-        *numbers[i] = atol(num); // fill array with integer
+        (*numbers)[i] = atol(num); // fill array with integer
         i++;
         num = strtok(NULL, ","); // move to next token
     }
