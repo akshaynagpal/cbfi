@@ -30,6 +30,7 @@ typedef struct
     unsigned long chown;
     unsigned long connect;
     unsigned long dup;
+    unsigned long dup2;
     unsigned long open;
     unsigned long close;
     unsigned long fclose;
