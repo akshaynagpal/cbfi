@@ -43,3 +43,15 @@ typedef struct
  * Declaration in wrap-fopen.c
  */
 extern call_counts global_counts;
+
+
+/**
+ *
+ * Signatures for common functions
+ *
+ * Function definitions in common.c
+ */
+// custom malloc function
+typedef void* (*orig_malloc_type)(size_t size);
+// parse comma separated string of integers
+unsigned int parse_fail_str(unsigned int **numbers, const char *failstr);

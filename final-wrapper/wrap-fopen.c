@@ -15,7 +15,7 @@ typedef FILE* (*orig_fopen_t)(const char *path, const char *mode);
 FILE *fopen(const char *path, const char *mode){
 	char* fail_nums = getenv("FOPEN_FAIL");
 
-    if (fail_nums != NULL){
+    if (fail_nums != NULL) {
     	++global_counts.fopen;
 
 	    // Note: strtok requires the a char* or char[] 
