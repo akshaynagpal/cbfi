@@ -2,8 +2,8 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
 - ~~calloc~~
 - ~~chdir~~		
-- chmod				
-- chown				
+- ~~chmod~~			
+- ~~chown~~	
 - ~~close~~				
 - ~~connect~~
 

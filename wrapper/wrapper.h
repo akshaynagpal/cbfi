@@ -27,6 +27,7 @@ typedef struct
     unsigned long calloc;
     unsigned long chdir;
     unsigned long chmod;
+    unsigned long chown;
     unsigned long connect;
     unsigned long open;
     unsigned long close;
