@@ -39,6 +39,7 @@ typedef struct
     unsigned long fputc;
     unsigned long getnetent;
     unsigned long getnetbyaddr;
+    unsigned long getnetbyname;
     unsigned long memcpy;
 } call_counts;
 

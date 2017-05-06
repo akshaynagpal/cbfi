@@ -11,8 +11,8 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~dup2~~				
 
 - #endnetent
-- getnetbyname
-- getnetbyaddr		
+- ~~getnetbyname~~
+- ~~getnetbyaddr~~  [NO TEST CASE]		
 - ~~getnetent~~
 
 - execv   			
