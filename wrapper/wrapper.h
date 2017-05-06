@@ -29,6 +29,7 @@ typedef struct
     unsigned long chmod;
     unsigned long chown;
     unsigned long connect;
+    unsigned long dup;
     unsigned long open;
     unsigned long close;
     unsigned long fclose;
