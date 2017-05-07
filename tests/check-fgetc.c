@@ -6,9 +6,10 @@ int main ()
 {
    FILE *fp;
    int c;
+   int count = 0;
   
    fp = fopen("file.txt","r");
-   if(fp == NULL) 
+   if(fp == NULL)
    {
       perror("Error in opening file");
       return(-1);
@@ -16,13 +17,13 @@ int main ()
    do
    {
       c = fgetc(fp);
-      if( c==EOF )
+      count++;
+      if(c==EOF)
       {
-         break ;
+         printf("\nerrno: %d\n",errno);
       }
       printf("%c", c);
-   }while(1);
-
+   }while(count<9);
    fclose(fp);
    return(0);
 }
