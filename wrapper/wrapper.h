@@ -37,6 +37,7 @@ typedef struct
     unsigned long fclose;
     unsigned long fgetc;
     unsigned long fgets;
+    unsigned long fork;
     unsigned long fputc;
     unsigned long getnetent;
     unsigned long getnetbyaddr;
