@@ -26,9 +26,9 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~fork~~
 - ~~fprintf~~   [COREUTIL]
 - ~~fputc~~  [COREUTIL]
-- fputs   [COREUTIL]
+- ~~fputs~~   [COREUTIL]
 - free   [COREUTIL]
-- fread   [COREUTIL]
+- ~~fread~~   [COREUTIL]
 - fseek   [COREUTIL]
 - fscanf   [COREUTIL]
 - fwrite   [COREUTIL]
