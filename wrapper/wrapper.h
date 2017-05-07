@@ -17,6 +17,7 @@
 #include <sys/socket.h>
 #include <execinfo.h>
 #include <netdb.h>
+#include <stdarg.h>
 
 
 // struct to maintain counts of calls
@@ -37,7 +38,9 @@ typedef struct
     unsigned long fclose;
     unsigned long fgetc;
     unsigned long fgets;
+    unsigned long fscanf;
     unsigned long fread;
+    unsigned long fwrite;
     unsigned long fseek;
     unsigned long fork;
     unsigned long fputc;
