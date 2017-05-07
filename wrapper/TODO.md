@@ -41,7 +41,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - getwd
 - getumask
 
-- kill
+- ~~kill~~
 
 - listen
 - lseek
