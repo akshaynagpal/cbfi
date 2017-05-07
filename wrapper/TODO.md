@@ -53,7 +53,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - mount - (temporary)
 
 - ~~open~~   [COREUTIL]
-- opendir
+- ~~opendir~~ [COREUTIL]
 
 - pclose
 - pipe
