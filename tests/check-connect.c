@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
    int sockfd, portno;
    struct sockaddr_in serv_addr;
    struct hostent *server;
-   int x;
+   int x,y;
 	
    portno = 80;  // port number
    
@@ -36,6 +36,12 @@ int main(int argc, char *argv[]) {
    /* Now connect to the server */
    x = connect(sockfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
    printf("%d\n",x);
-   assert(x == 0);
-   printf("end of connect check\n");
+   if(x != 0){
+      printf("connect 1 fail\n");
+   }
+   y = connect(sockfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
+   printf("%d\n",y);
+   if(y != 0){
+      printf("connect 2 fail\n");
+   }
 }
