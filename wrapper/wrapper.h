@@ -39,6 +39,7 @@ typedef struct
     unsigned long fgets;
     unsigned long fork;
     unsigned long fputc;
+    unsigned long fprintf;
     unsigned long getnetent;
     unsigned long getnetbyaddr;
     unsigned long getnetbyname;
