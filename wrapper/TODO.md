@@ -33,8 +33,8 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - fscanf   [COREUTIL]
 - ~~fwrite~~   [COREUTIL]
 
-- getc   [COREUTIL]
-- gets   [COREUTIL]
+- ~~getc~~   [COREUTIL]
+- ~~gets~~   [COREUTIL]
 - gethostbyname
 - gethostbyaddr
 - getpid
