@@ -14,8 +14,9 @@ int dup2(int oldfd, int newfd) {
     int error = 0; // set to -1 if call is to be failed
     unsigned int *numbers = NULL; // filled by parse function
     unsigned int i = 0, length = 0;    // size of numbers array of integers
+    int original = btrace_has_gcov();   // check if called by gcov
 
-    if (fail_num != NULL) {
+    if (fail_num != NULL && original == 0) {
         ++global_counts.dup2;
         length = parse_fail_str(&numbers, fail_num);
         // iterate over numbers array

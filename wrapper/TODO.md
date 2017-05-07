@@ -21,7 +21,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
 - ~~fclose~~   [COREUTIL]		
 - ~~fgetc~~   [COREUTIL]				
-- fgets   [COREUTIL]				
+- ~~fgets~~   [COREUTIL]				
 - ~~fopen~~
 - fork
 - fprintf   [COREUTIL]

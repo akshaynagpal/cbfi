@@ -12,7 +12,7 @@
 int main(int argc, char const *argv[])
 {
     struct netent *entry;
-    entry = getnetbyname("link-local");;
+    entry = getnetbyname("link-local");
     assert(entry == NULL);
     entry = getnetbyname("link-local");
     assert(entry == NULL);
