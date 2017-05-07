@@ -6,9 +6,6 @@
 
 #include "wrapper.h"
 
-// see wrapper.h for more info  on call_counts
-call_counts global_counts;
-
 typedef int (*orig_open_type)(const char *pathname, int flags, mode_t mode);
 
 int open(const char *pathname, int flags, mode_t mode){
