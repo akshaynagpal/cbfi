@@ -54,6 +54,7 @@ typedef struct
     unsigned long memcpy;
     unsigned long getc;
     unsigned long gets;
+    unsigned long system;
 } call_counts;
 
 /**
