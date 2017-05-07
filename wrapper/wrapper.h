@@ -50,6 +50,7 @@ typedef struct
     unsigned long getnetbyaddr;
     unsigned long getnetbyname;
     unsigned long kill;
+    unsigned long lseek;
     unsigned long memcpy;
     unsigned long getc;
     unsigned long gets;
