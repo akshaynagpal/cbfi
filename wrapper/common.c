@@ -39,3 +39,22 @@ unsigned int parse_fail_str(unsigned int **numbers, const char *failstr) {
     free(numstr);
     return size;
 }
+
+
+int btrace_has_gcov(void) {
+    int array_len = 20;
+    void *array[array_len];
+    int size_on_stack = backtrace(array, array_len);
+    char* gcov_flush_string = "gcov_flush";
+    char** backtrace_list = backtrace_symbols(array,size_on_stack);
+    int ret = 0;
+    // check if gcov_flush is calling
+    for (int i = 0; i < size_on_stack; i++)
+    {
+        if(strstr(backtrace_list[i], gcov_flush_string)!=NULL){
+            ret = 1;  // gcov flush is calling, so skip
+            break;
+        }
+    }
+    return ret;
+}

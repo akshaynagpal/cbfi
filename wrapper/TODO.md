@@ -12,12 +12,12 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
 - #endnetent
 - ~~getnetbyname~~
-- ~~getnetbyaddr~~  [NO TEST CASE]		
+- ~~getnetbyaddr~~
 - ~~getnetent~~
 
-- execv   			
-- execvp			
-- execve			
+- execv
+- execvp
+- execve	
 
 - ~~fclose~~   [COREUTIL]		
 - ~~fgetc~~   [COREUTIL]				

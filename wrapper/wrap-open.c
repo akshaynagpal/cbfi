@@ -15,22 +15,10 @@ int open(const char *pathname, int flags, mode_t mode){
     char* fail_num = getenv("OPEN_FAIL");
     char* pre_string = "/dev/tty";
     char* gcda_ext = "gcda";
-    char* gcov_flush_string = "gcov_flush";
-    int original = 0;   // dont need to call original function
-    void *array[10];
     int error = 0; // set to -1 if call is to be failed
     unsigned int *numbers = NULL; // filled by parse function
     unsigned int i = 0, length = 0;    // size of numbers array of integers
-    int size_on_stack = backtrace(array,10);
-    char** backtrace_list = backtrace_symbols(array,size_on_stack);
-    
-    // check if gcov_flush is calling
-    for (int i = 0; i < size_on_stack; i++)
-    {
-        if(strstr(backtrace_list[i],gcov_flush_string)!=NULL){
-            original = 1;  // gcov flush is calling, so skip to orig_malloc by setting original to 1
-        }
-    }
+    int original = btrace_has_gcov();   // check if called by gcov
 
     // checking for inner calls to open function
     if (fail_num != NULL && original == 0 && strcmp(pathname,pre_string) != 0

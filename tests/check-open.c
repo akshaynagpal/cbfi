@@ -10,12 +10,12 @@
 
 int main(){
     int x=open("opentest1.txt",O_RDONLY);
-    assert(x!=-1);
+    assert(x==-1);
     int y = close(x);
-    assert(y!=-1);
+    assert(y==-1);
     int w = open("opentest.txt",O_RDONLY);
-    assert(w!=-1);
+    assert(w==-1);
     int z = close(w);
-    assert(z!=-1);
+    assert(z==-1);
     return 0;
 }

@@ -36,6 +36,7 @@ typedef struct
     unsigned long close;
     unsigned long fclose;
     unsigned long fgetc;
+    unsigned long fgets;
     unsigned long fputc;
     unsigned long getnetent;
     unsigned long getnetbyaddr;
@@ -63,3 +64,6 @@ extern call_counts global_counts;
 typedef void* (*orig_malloc_type)(size_t size);
 // parse comma separated string of integers
 unsigned int parse_fail_str(unsigned int **numbers, const char *failstr);
+
+// check if gcov flush
+int btrace_has_gcov(void);
