@@ -50,6 +50,7 @@ typedef struct
     unsigned long getnetbyaddr;
     unsigned long getnetbyname;
     unsigned long memcpy;
+    unsigned long getc;
 } call_counts;
 
 /**
