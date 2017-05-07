@@ -38,6 +38,7 @@ typedef struct
     unsigned long fgetc;
     unsigned long fgets;
     unsigned long fread;
+    unsigned long fseek;
     unsigned long fork;
     unsigned long fputc;
     unsigned long fputs;

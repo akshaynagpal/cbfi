@@ -29,7 +29,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~fputs~~   [COREUTIL]
 - free   [COREUTIL]
 - ~~fread~~   [COREUTIL]
-- fseek   [COREUTIL]
+- ~~fseek~~   [COREUTIL]
 - fscanf   [COREUTIL]
 - fwrite   [COREUTIL]
 
