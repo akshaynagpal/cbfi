@@ -10,12 +10,20 @@
 
 int main(){
     int x=open("opentest1.txt",O_RDONLY);
-    assert(x==-1);
+    if(x==-1){
+    	printf("open 1 failed\n");
+    }
     int y = close(x);
-    assert(y==-1);
+    if(y==-1){
+    	printf("close 1 failed\n");
+    }
     int w = open("opentest.txt",O_RDONLY);
-    assert(w==-1);
+    if(w==-1){
+    	printf("open 2 failed\n");	
+    }
     int z = close(w);
-    assert(z==-1);
+    if(z==-1){
+    	printf("close 2 failed\n");
+    }
     return 0;
 }
