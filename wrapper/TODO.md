@@ -31,7 +31,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~fread~~   [COREUTIL]
 - ~~fseek~~   [COREUTIL]
 - fscanf   [COREUTIL]
-- fwrite   [COREUTIL]
+- ~~fwrite~~   [COREUTIL]
 
 - getc   [COREUTIL]
 - gets   [COREUTIL]
