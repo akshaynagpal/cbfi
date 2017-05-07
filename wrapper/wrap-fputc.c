@@ -9,7 +9,7 @@
 typedef int (*orig_fputc_type)(int c, FILE *stream);
 
 int fputc(int c, FILE *stream){
-    char* fail_nums = getenv("FPUTC_FAIL");
+    char* fail_num = getenv("FPUTC_FAIL");
     unsigned int *numbers = NULL; // filled by parse function
     int original = btrace_has_gcov();   // check if called by gcov
     unsigned int length, i;
