@@ -18,6 +18,7 @@
 #include <execinfo.h>
 #include <netdb.h>
 #include <stdarg.h>
+#include <dirent.h>
 
 
 // struct to maintain counts of calls
@@ -55,6 +56,7 @@ typedef struct
     unsigned long getc;
     unsigned long gets;
     unsigned long system;
+    unsigned long opendir;
 } call_counts;
 
 /**
