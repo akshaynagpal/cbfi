@@ -6,6 +6,10 @@
 
 int main(){
 	int x = chdir("..");
-    assert(x == 0);
+    if(x != 0)
+    	printf("chdir1 failed\n");
+    int y = chdir("..");
+    if(y!=0)
+    	printf("chdir2 failed\n");
     return 0;
 }
