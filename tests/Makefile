@@ -2,7 +2,7 @@
 # 
 
 CC = gcc
-CFLAGS=-Wall --coverage -g -rdynamic
+CFLAGS=-Wall --coverage -g -rdynamic -O0
 
 # Should be equivalent to your list of C files
 SRC=$(wildcard *.c)
