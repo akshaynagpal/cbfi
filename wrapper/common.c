@@ -20,7 +20,7 @@ unsigned int parse_fail_str(unsigned int **numbers, const char *failstr) {
     char *numstr = NULL;
 
     // assume null terminated string
-    numstr = (char*)malloc(sizeof(char) * (strlen(failstr)+1));
+    numstr = (char*)custom_malloc(sizeof(char) * (strlen(failstr)+1));
     strcpy(numstr, failstr);
     while(numstr[i] != '\0') {
         if (numstr[i]==',')
@@ -28,7 +28,7 @@ unsigned int parse_fail_str(unsigned int **numbers, const char *failstr) {
         i++;
     }
     size += 1; // total integers to be parsed is 1 more than comma
-    *numbers = (unsigned int*)malloc(sizeof(unsigned int) * size);
+    *numbers = (unsigned int*)custom_malloc(sizeof(unsigned int) * size);
     i = 0;
     num = strtok(numstr, ",");
     while (num != NULL && i < size) {
