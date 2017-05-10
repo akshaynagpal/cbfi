@@ -64,7 +64,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - putc
 - puts   [COREUTIL]
 
-- read
+- ~~read~~
 - remove
 - rename
 - recv
@@ -83,4 +83,4 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
 - wait
 - waitpid
-- write
+- ~~write~~

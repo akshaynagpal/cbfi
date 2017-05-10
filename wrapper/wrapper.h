@@ -58,6 +58,7 @@ typedef struct
     unsigned long gets;
     unsigned long read;
     unsigned long system;
+    unsigned long write;
     unsigned long opendir;
 } call_counts;
 
