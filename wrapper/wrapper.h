@@ -56,6 +56,7 @@ typedef struct
     unsigned long memcmp;
     unsigned long getc;
     unsigned long gets;
+    unsigned long putc;
     unsigned long read;
     unsigned long system;
     unsigned long write;
