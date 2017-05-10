@@ -7,7 +7,7 @@ Added python wrapper
 1. Unzip/uncompress coreutils-8.27.tar.xz into a folder
 2. Rename folder to `coreutils`
 3. `cd coreutils`
-4. `./configure CFLAGS="-g --coverage"`
+4. `./configure CFLAGS="-g --coverage -rdynamic"`
 5. `make`
 7. Coreutils executables will be in `/absolute/path/to/some/folder/src`
 8. `rm *.gcda` before each run of a coreutils executable

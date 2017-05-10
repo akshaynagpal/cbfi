@@ -53,6 +53,7 @@ typedef struct
     unsigned long kill;
     unsigned long lseek;
     unsigned long memcpy;
+    unsigned long memcmp;
     unsigned long getc;
     unsigned long gets;
     unsigned long system;
