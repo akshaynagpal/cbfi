@@ -1,6 +1,5 @@
 # Disallow all files
 *
-coreutils/
 
 # Allow following files
 !LICENSE
