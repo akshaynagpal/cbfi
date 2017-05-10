@@ -1,14 +1,35 @@
+/**
+ *
+ * memcpy test
+ *
+ *
+ **/
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
 #include <string.h>
 
-int main ()
-{
-   const char src[50] = "http://www.google.com";
-   char dest[50];
+int main() {
+	char *src = "HELLO";
+	char dest[100];
+	char *res;
+	int err = 0;
+	size_t bytes = strlen(src) * sizeof(char);
 
-   printf("Before memcpy dest = %s\n", dest);
-   memcpy(dest, src, strlen(src)+1);
-   printf("After memcpy dest = %s\n", dest);
-   
-   return(0);
+	res = memcpy(dest, src, bytes);
+	// memcpy must return dest pointer
+	assert(res == dest);
+	// compare contents
+	err = memcmp(res, src, bytes);
+	assert(err != 0);	// data copying should fail
+
+	res = memcpy(dest, src, bytes);
+	// memcpy must return dest pointer
+	assert(res == dest);
+	// compare contents
+	err = memcmp(res, src, bytes);
+	assert(err != 0);	// data copying should fail
+
+	return err;
 }

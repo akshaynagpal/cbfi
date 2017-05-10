@@ -47,7 +47,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~lseek~~
 
 - malloc [fix-malloc]
-- memcpy
+- ~~memcpy~~
 
 - ~~memcmp~~   [COREUTIL] // memcmp does not fails so return global_counts.memcmp to simulate incorrect answer
 
@@ -62,7 +62,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - popen
 - ~~printf~~   [COREUTIL]
 - ~~putc~~
-- puts   [COREUTIL]
+- ~~puts~~   [COREUTIL]
 
 - ~~read~~
 - remove
