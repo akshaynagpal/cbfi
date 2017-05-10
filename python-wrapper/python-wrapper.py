@@ -323,6 +323,6 @@ if __name__ == "__main__":
 
 				current_run += 1
 
-	print "Executions", current_run
 	print "\nQueue:",queue
+	print "\nTotal Executions:", len(storage_of_execution)
 	print "\nCheck lines:", error_lines
