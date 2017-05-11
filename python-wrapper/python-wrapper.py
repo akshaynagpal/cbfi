@@ -7,6 +7,7 @@ import subprocess
 from collections import deque
 from copy import deepcopy
 import datetime
+import os
 
 """
 Using pygdbmi.
@@ -117,6 +118,17 @@ def create_new_call_fail_dictionary(calls_failed, call, current_max_call):
 		new_call_fail_dict[call] = set([current_max_call])
 
 	return new_call_fail_dict
+
+def clean_playground(playground_folder):
+	for file in os.listdir(playground_folder):
+		file_path = os.path.join(playground_folder, file)
+		try:
+			if os.path.isfile(file_path):
+				os.unlink(file_path)
+			elif os.path.isdir(file_path): 
+				shutil.rmtree(file_path)
+		except Exception as e:
+			print(e)
 
 
 def do_processing(executable, arguments, source_file_name, source_file_path, call_fail_dict):
@@ -230,6 +242,7 @@ if __name__ == "__main__":
 	storage_of_execution = []
 	d = datetime.datetime.now()
 	file_report = "cbfi_report_"+str(d).split('.')[0]+'.txt'
+	playground = None
 
 	if len(sys.argv) < 2:
 		print "Usage: python python-wrapper <config.json>"
@@ -261,6 +274,9 @@ if __name__ == "__main__":
 	executable = config_json['EXECUTABLE']
 	arguments = config_json['ARGUMENTS']
 	library = config_json['LIBRARY_PATH']
+
+	if 'PLAYGROUND' in config_json:
+		playground = config_json['PLAYGROUND']
 	
 	current_run = 1
 
@@ -274,9 +290,9 @@ if __name__ == "__main__":
 		call_num_to_fail = 0
 
 		while True:
+			clean_playground(playground)
 
 			call_num_to_fail += 1
-
 			call_fail_dict = {		call_to_fail:set([call_num_to_fail])		}
 
 			print "\n",call_fail_dict
@@ -335,6 +351,7 @@ if __name__ == "__main__":
 				current_max_call = 0
 
 			while True:
+				clean_playground(playground)
 				current_max_call += 1
 
 				new_call_fail_dict = create_new_call_fail_dictionary(calls_failed, call, current_max_call)
