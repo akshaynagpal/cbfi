@@ -26,7 +26,7 @@ def gdb_read(gdb_controller,raise_error = False):
 			list_of_gdb_messages.append(msg)
 	return list_of_gdb_messages
 
-def get_linecount_string(out, source_file_name, abrupt):
+def get_linecount_string(gcovdata, source_file_name, abrupt, call_fail_dict):
 	"""
 	Currently assuming that all the lines of the C file would be at the
 	top of the gcov data and the header file lines would be at the bottom.
@@ -35,7 +35,7 @@ def get_linecount_string(out, source_file_name, abrupt):
 	
 	process = False
 	exec_count = ""
-	for line in out:
+	for line in gcovdata:
 		if 'file' in line and source_file_name in line:
 			process = True
 			continue
@@ -44,12 +44,30 @@ def get_linecount_string(out, source_file_name, abrupt):
 		elif process and 'file' in line and '.h' in line:
 			break
 
+	write_to_file(gcovdata, call_fail_dict, exec_count)
+
 	return exec_count
 
-def write_to_file():
-	pass
+def write_to_file(gcovdata, call_fail_dict, exec_count):
 
+	with open(file_report,'a') as exec_count_file:
+		exec_count_file.write("-----------------------------------------------\n")
+		exec_count_file.write("Execution: "+str(current_run)+"\n")
+		exec_count_file.write("-----------------------------------------------\n")
+		exec_count_file.write("Calls Failed:\n")
+		for call,call_nums in call_fail_dict.iteritems():
+			exec_count_file.write(call.split('_')[0]+":\t"+",".join(map(str, call_nums))+"\n")
+		exec_count_file.write("\nCoverage\n")
+		lines = len(exec_count)
+		zeroes = exec_count.count('0')
+		cov_per = (lines - zeroes) / lines * 100
+		exec_count_file.write("Lines: "+str(lines-zeroes) + "/" + str(lines)+"\n")
+		exec_count_file.write("Percentage: {:3.2f}".format(cov_per) + " %\n\n")
 
+		for gcovlines in gcovdata:
+			exec_count_file.write(gcovlines+"\n")
+
+	exec_count_file.close()
 
 def should_not_proceed(coverage_dict):
 
@@ -182,7 +200,7 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 		gcovdata = gcovfile.read().split('\n')
 
 	
-	exec_string = get_linecount_string(gcovdata, source_file_name, abrupt)
+	exec_string = get_linecount_string(gcovdata, source_file_name, abrupt, call_fail_dict)
 
 	# Delete gcda file
 	subprocess.call(['rm', '{0}.{1}'.format(source_file_path[:-2],'gcda')])
@@ -208,10 +226,10 @@ if __name__ == "__main__":
 	global library
 	global storage_of_execution
 	global current_run
-	global file_testcase 
+	global file_report 
 	storage_of_execution = []
 	d = datetime.datetime.now()
-	file_testcase = str(d).split('.')[0]
+	file_report = "cbfi_report_"+str(d).split('.')[0]+'.txt'
 
 	if len(sys.argv) < 2:
 		print "Usage: python python-wrapper <config.json>"
@@ -265,6 +283,9 @@ if __name__ == "__main__":
 
 			exec_string, abrupt, error_lineno = do_processing(executable, arguments, \
 				source_file_name, source_file_path, call_fail_dict)
+
+			current_run += 1
+
 			print "Coverage",exec_string
 
 			if abrupt and error_lineno != -1:
@@ -284,7 +305,7 @@ if __name__ == "__main__":
 				storage_of_execution.append(coverage_dict)
 				lines = len(exec_string)
 				zeroes = exec_string.count('0')
-				coverage = (lines - zeroes) / lines
+				coverage = (lines - zeroes) / lines * 100
 				print lines, zeroes, coverage
 				queue.append(
 					{
@@ -295,8 +316,6 @@ if __name__ == "__main__":
 				print "Added"
 
 			all_executions.append(exec_string)
-
-			current_run += 1
 
 		# For Single calls clear execution_strings
 		del all_executions[:]	
@@ -328,6 +347,8 @@ if __name__ == "__main__":
 				
 				exec_string, abrupt, error_lineno = do_processing(executable, arguments, source_file_name, source_file_path, new_call_fail_dict)
 
+				current_run += 1
+
 				print "Coverage",exec_string
 			
 				if abrupt and error_lineno != -1:
@@ -341,7 +362,7 @@ if __name__ == "__main__":
 				if should_not_proceed(coverage_dict):
 					lines = len(exec_string)
 					zeroes = exec_string.count('0')
-					coverage = (lines - zeroes) / lines
+					coverage = (lines - zeroes) / lines * 100
 					print lines, zeroes, coverage
 					print "Not adding"
 					storage_of_execution.append(coverage_dict)
@@ -363,7 +384,12 @@ if __name__ == "__main__":
 
 				all_executions.append(exec_string)
 
-				current_run += 1
+	with open(file_report,'r+') as report_file:
+		data = report_file.read()
+		report_file.seek(0, 0)
+		report_file.write("Check the following lines of your source program for vulnerabilities:\n")
+		report_file.write(",".join(map(str, error_lines))+"\n\n")
+		report_file.write("Total Executions: "+str(len(storage_of_execution))+"\n\n")
+		report_file.write(data)
 
-	print "\nTotal Executions:", len(storage_of_execution)
-	print "\nCheck lines:", error_lines
+	report_file.close()
