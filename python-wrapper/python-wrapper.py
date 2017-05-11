@@ -61,10 +61,11 @@ def write_to_file(gcovdata, call_fail_dict, exec_count):
 			exec_count_file.write(call.split('_')[0]+":\t"+",".join(map(str, call_nums))+"\n")
 		exec_count_file.write("\nCoverage\n")
 		lines = len(exec_count)
-		zeroes = exec_count.count('0')
-		cov_per = (lines - zeroes) / lines * 100
-		exec_count_file.write("Lines: "+str(lines-zeroes) + "/" + str(lines)+"\n")
-		exec_count_file.write("Percentage: {:3.2f}".format(cov_per) + " %\n\n")
+		if lines != 0:
+			zeroes = exec_count.count('0')
+			cov_per = (lines - zeroes) / lines * 100
+			exec_count_file.write("Lines: "+str(lines-zeroes) + "/" + str(lines)+"\n")
+			exec_count_file.write("Percentage: {:3.2f}".format(cov_per) + " %\n\n")
 
 		for gcovlines in gcovdata:
 			exec_count_file.write(gcovlines+"\n")
@@ -324,9 +325,10 @@ if __name__ == "__main__":
 			else:
 				storage_of_execution.append(coverage_dict)
 				lines = len(exec_string)
-				zeroes = exec_string.count('0')
-				coverage = (lines - zeroes) / lines * 100
-				print lines, zeroes, coverage
+				if lines != 0:
+					zeroes = exec_string.count('0')
+					coverage = (lines - zeroes) / lines * 100
+					print (lines-zeroes),"/",lines," Coverage:",coverage
 				queue.append(
 					{
 						'calls':call_fail_dict,
@@ -394,7 +396,7 @@ if __name__ == "__main__":
 					lines = len(exec_string)
 					zeroes = exec_string.count('0')
 					coverage = (lines - zeroes) / lines
-					print lines, zeroes, coverage
+					print (lines-zeroes),"/",lines," Coverage:",coverage
 
 					queue.append(
 						{
