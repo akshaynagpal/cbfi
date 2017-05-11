@@ -23,6 +23,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~fgetc~~   [COREUTIL]				
 - ~~fgets~~   [COREUTIL]				
 - ~~fopen~~
+- ~~fileno~~ [COREUTIL]
 - ~~fork~~
 - ~~fprintf~~   [COREUTIL]
 - ~~fputc~~  [COREUTIL]

@@ -26,6 +26,7 @@
 typedef struct
 {
     unsigned long fopen;
+    unsigned long fileno;
     unsigned long printf;
     unsigned long malloc;
     unsigned long calloc;
