@@ -6,6 +6,7 @@ import json
 import subprocess
 from collections import deque
 from copy import deepcopy
+import datetime
 
 """
 Using pygdbmi.
@@ -31,7 +32,7 @@ def get_linecount_string(out, source_file_name, abrupt):
 	top of the gcov data and the header file lines would be at the bottom.
 	So we would be stopping when he encounter an .h file in the report
 	"""
-	write_to_file()
+	
 	process = False
 	exec_count = ""
 	for line in out:
@@ -42,9 +43,11 @@ def get_linecount_string(out, source_file_name, abrupt):
 			exec_count += line.split(',')[1]
 		elif process and 'file' in line and '.h' in line:
 			break
+
 	return exec_count
 
 def write_to_file():
+	pass
 
 
 
@@ -178,7 +181,7 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 	with open('{0}.{1}'.format(source_file_name,'gcov'), 'r') as gcovfile:
 		gcovdata = gcovfile.read().split('\n')
 
-	#pprint(gcovdata)
+	
 	exec_string = get_linecount_string(gcovdata, source_file_name, abrupt)
 
 	# Delete gcda file
