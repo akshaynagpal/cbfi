@@ -1,0 +1,8 @@
+{
+	"SOURCE_FILE_PATH":"../tests/dir-test.c",
+	"EXECUTABLE":"../tests/dir-test",
+	"ARGUMENTS":"",
+	"FAIL_CALLS":["OPENDIR","MKDIR","RMDIR"],
+	"LIBRARY_PATH":"../wrapper/wraplib.so",
+	"PLAYGROUND":"/home/akshay/Desktop/playground/"
+}

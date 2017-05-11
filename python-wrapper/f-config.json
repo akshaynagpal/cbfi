@@ -1,0 +1,8 @@
+{
+	"SOURCE_FILE_PATH":"../tests/test-f-funcs.c",
+	"EXECUTABLE":"../tests/test-f-funcs",
+	"ARGUMENTS":"",
+	"FAIL_CALLS":["FPUTC","FREAD","FWRITE","FGETS"],
+	"LIBRARY_PATH":"../wrapper/wraplib.so",
+	"PLAYGROUND":"/home/akshay/Desktop/playground/"
+}
