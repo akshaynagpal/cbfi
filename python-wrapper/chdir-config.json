@@ -1,0 +1,7 @@
+{
+	"SOURCE_FILE_PATH":"../coreutils/src/chdir.c",
+	"EXECUTABLE":"../coreutils/src/chdir",
+	"ARGUMENTS":"..",
+	"FAIL_CALLS":["CHDIR"],
+	"LIBRARY_PATH":"../wrapper/wraplib.so"
+}

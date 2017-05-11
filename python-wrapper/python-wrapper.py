@@ -270,10 +270,19 @@ if __name__ == "__main__":
 		calls_to_fail.append("%s_FAIL" % call.upper())
 		# calls_to_fail.append(libc_mapping[call])
 	source_file_path = config_json['SOURCE_FILE_PATH']
+	if not os.path.isfile(source_file_path):
+		print "Error: Not valid source file"
+		exit(0)
 	source_file_name = source_file_path.split("/")[-1]
 	executable = config_json['EXECUTABLE']
+	if not os.path.isfile(executable):
+		print "Error: Not valid executable"
+		exit(0)
 	arguments = config_json['ARGUMENTS']
 	library = config_json['LIBRARY_PATH']
+	if not os.path.isfile(library):
+		print "Error: Not a valid library path"
+		exit(0)
 
 	if 'PLAYGROUND' in config_json:
 		playground = config_json['PLAYGROUND']
@@ -290,7 +299,8 @@ if __name__ == "__main__":
 		call_num_to_fail = 0
 
 		while True:
-			clean_playground(playground)
+			if playground is not None:
+				clean_playground(playground)
 
 			call_num_to_fail += 1
 			call_fail_dict = {		call_to_fail:set([call_num_to_fail])		}
@@ -351,7 +361,8 @@ if __name__ == "__main__":
 				current_max_call = 0
 
 			while True:
-				clean_playground(playground)
+				if playground is not None:
+					clean_playground(playground)
 				current_max_call += 1
 
 				new_call_fail_dict = create_new_call_fail_dictionary(calls_failed, call, current_max_call)
