@@ -1,0 +1,8 @@
+{
+	"SOURCE_FILE_PATH":"../tests/check-pc.c",
+	"EXECUTABLE":"../tests/check-pc",
+	"ARGUMENTS":"",
+	"FAIL_CALLS":["OPEN", "CLOSE", "PUTC", "PUTS", "READ", "GETC", "WRITE"],
+	"LIBRARY_PATH":"../wrapper/wraplib.so",
+	"PLAYGROUND": "/home/kunal/Documents/secure-4995/cbfi/python-wrapper/playground"
+}

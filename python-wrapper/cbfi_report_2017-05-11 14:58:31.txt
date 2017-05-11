@@ -1,0 +1,3932 @@
+Check the following lines of your source program for errors/unhandled exceptions:
+32,57,59,43,39
+
+Total Executions: 90
+
+-----------------------------------------------
+Execution: 1
+-----------------------------------------------
+Calls Failed:
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 2
+-----------------------------------------------
+Calls Failed:
+OPEN:	2
+
+Coverage
+Lines: 11/25
+Percentage: 44.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,11
+
+-----------------------------------------------
+Execution: 3
+-----------------------------------------------
+Calls Failed:
+OPEN:	3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 4
+-----------------------------------------------
+Calls Failed:
+OPEN:	4
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 5
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 6
+-----------------------------------------------
+Calls Failed:
+CLOSE:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 7
+-----------------------------------------------
+Calls Failed:
+PUTC:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,45,flush_gcov
+lcount:11,45
+lcount:12,45
+lcount:13,44
+
+-----------------------------------------------
+Execution: 8
+-----------------------------------------------
+Calls Failed:
+PUTC:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 9
+-----------------------------------------------
+Calls Failed:
+PUTC:	3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 10
+-----------------------------------------------
+Calls Failed:
+PUTS:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 11
+-----------------------------------------------
+Calls Failed:
+PUTS:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 12
+-----------------------------------------------
+Calls Failed:
+READ:	1
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 13
+-----------------------------------------------
+Calls Failed:
+READ:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 14
+-----------------------------------------------
+Calls Failed:
+READ:	3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 15
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 16
+-----------------------------------------------
+Calls Failed:
+GETC:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 17
+-----------------------------------------------
+Calls Failed:
+GETC:	3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 18
+-----------------------------------------------
+Calls Failed:
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 19
+-----------------------------------------------
+Calls Failed:
+WRITE:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 20
+-----------------------------------------------
+Calls Failed:
+WRITE:	3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 21
+-----------------------------------------------
+Calls Failed:
+OPEN:	1,2
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 22
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 23
+-----------------------------------------------
+Calls Failed:
+PUTC:	1
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 24
+-----------------------------------------------
+Calls Failed:
+PUTS:	1
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 25
+-----------------------------------------------
+Calls Failed:
+READ:	1
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 26
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 27
+-----------------------------------------------
+Calls Failed:
+WRITE:	1
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 28
+-----------------------------------------------
+Calls Failed:
+OPEN:	2,3
+
+Coverage
+Lines: 11/25
+Percentage: 44.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,11
+
+-----------------------------------------------
+Execution: 29
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+OPEN:	2
+
+Coverage
+Lines: 11/25
+Percentage: 44.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,11
+
+-----------------------------------------------
+Execution: 30
+-----------------------------------------------
+Calls Failed:
+PUTC:	1
+OPEN:	2
+
+Coverage
+Lines: 11/25
+Percentage: 44.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,11
+
+-----------------------------------------------
+Execution: 31
+-----------------------------------------------
+Calls Failed:
+PUTS:	1
+OPEN:	2
+
+Coverage
+Lines: 11/25
+Percentage: 44.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,11
+
+-----------------------------------------------
+Execution: 32
+-----------------------------------------------
+Calls Failed:
+READ:	1
+OPEN:	2
+
+Coverage
+Lines: 11/25
+Percentage: 44.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,11
+
+-----------------------------------------------
+Execution: 33
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+OPEN:	2
+
+Coverage
+Lines: 11/25
+Percentage: 44.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,11
+
+-----------------------------------------------
+Execution: 34
+-----------------------------------------------
+Calls Failed:
+WRITE:	1
+OPEN:	2
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 35
+-----------------------------------------------
+Calls Failed:
+OPEN:	3,4
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 36
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+OPEN:	3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 37
+-----------------------------------------------
+Calls Failed:
+PUTC:	1
+OPEN:	3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,45,flush_gcov
+lcount:11,45
+lcount:12,45
+lcount:13,44
+
+-----------------------------------------------
+Execution: 38
+-----------------------------------------------
+Calls Failed:
+PUTS:	1
+OPEN:	3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 39
+-----------------------------------------------
+Calls Failed:
+READ:	1
+OPEN:	3
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 40
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+OPEN:	3
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 41
+-----------------------------------------------
+Calls Failed:
+WRITE:	1
+OPEN:	3
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 42
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1,2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 43
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+PUTC:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,45,flush_gcov
+lcount:11,45
+lcount:12,45
+lcount:13,44
+
+-----------------------------------------------
+Execution: 44
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+PUTS:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 45
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+READ:	1
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 46
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+GETC:	1
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 47
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 48
+-----------------------------------------------
+Calls Failed:
+PUTC:	1,2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,45,flush_gcov
+lcount:11,45
+lcount:12,45
+lcount:13,44
+
+-----------------------------------------------
+Execution: 49
+-----------------------------------------------
+Calls Failed:
+PUTS:	1
+PUTC:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,45,flush_gcov
+lcount:11,45
+lcount:12,45
+lcount:13,44
+
+-----------------------------------------------
+Execution: 50
+-----------------------------------------------
+Calls Failed:
+READ:	1
+PUTC:	1
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 51
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+PUTC:	1
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 52
+-----------------------------------------------
+Calls Failed:
+PUTC:	1
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 53
+-----------------------------------------------
+Calls Failed:
+PUTC:	2
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 54
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+PUTC:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 55
+-----------------------------------------------
+Calls Failed:
+PUTC:	2,3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 56
+-----------------------------------------------
+Calls Failed:
+PUTS:	1
+PUTC:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 57
+-----------------------------------------------
+Calls Failed:
+READ:	1
+PUTC:	2
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 58
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+PUTC:	2
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 59
+-----------------------------------------------
+Calls Failed:
+PUTC:	2
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 60
+-----------------------------------------------
+Calls Failed:
+PUTS:	1,2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 61
+-----------------------------------------------
+Calls Failed:
+READ:	1
+PUTS:	1
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 62
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+PUTS:	1
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 63
+-----------------------------------------------
+Calls Failed:
+PUTS:	1
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 64
+-----------------------------------------------
+Calls Failed:
+READ:	1,2
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 65
+-----------------------------------------------
+Calls Failed:
+READ:	1
+GETC:	1
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 66
+-----------------------------------------------
+Calls Failed:
+READ:	1
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 67
+-----------------------------------------------
+Calls Failed:
+READ:	2
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 68
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+READ:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 69
+-----------------------------------------------
+Calls Failed:
+READ:	2
+PUTC:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,45,flush_gcov
+lcount:11,45
+lcount:12,45
+lcount:13,44
+
+-----------------------------------------------
+Execution: 70
+-----------------------------------------------
+Calls Failed:
+READ:	2
+PUTS:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 71
+-----------------------------------------------
+Calls Failed:
+READ:	2,3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 72
+-----------------------------------------------
+Calls Failed:
+READ:	2
+GETC:	1
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 73
+-----------------------------------------------
+Calls Failed:
+READ:	2
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 74
+-----------------------------------------------
+Calls Failed:
+GETC:	1,2
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 75
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 76
+-----------------------------------------------
+Calls Failed:
+GETC:	2
+OPEN:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 77
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+GETC:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 78
+-----------------------------------------------
+Calls Failed:
+GETC:	2
+PUTC:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,45,flush_gcov
+lcount:11,45
+lcount:12,45
+lcount:13,44
+
+-----------------------------------------------
+Execution: 79
+-----------------------------------------------
+Calls Failed:
+GETC:	2
+PUTS:	1
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 80
+-----------------------------------------------
+Calls Failed:
+READ:	1
+GETC:	2
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 81
+-----------------------------------------------
+Calls Failed:
+GETC:	2,3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 82
+-----------------------------------------------
+Calls Failed:
+GETC:	2
+WRITE:	1
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 83
+-----------------------------------------------
+Calls Failed:
+WRITE:	1,2
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 84
+-----------------------------------------------
+Calls Failed:
+OPEN:	1
+WRITE:	2
+
+Coverage
+Lines: 8/25
+Percentage: 32.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,0
+lcount:38,0
+lcount:39,0
+lcount:42,0
+lcount:43,0
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,9,flush_gcov
+lcount:11,9
+lcount:12,9
+lcount:13,8
+
+-----------------------------------------------
+Execution: 85
+-----------------------------------------------
+Calls Failed:
+CLOSE:	1
+WRITE:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 86
+-----------------------------------------------
+Calls Failed:
+PUTC:	1
+WRITE:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,45,flush_gcov
+lcount:11,45
+lcount:12,45
+lcount:13,44
+
+-----------------------------------------------
+Execution: 87
+-----------------------------------------------
+Calls Failed:
+PUTS:	1
+WRITE:	2
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
+-----------------------------------------------
+Execution: 88
+-----------------------------------------------
+Calls Failed:
+READ:	1
+WRITE:	2
+
+Coverage
+Lines: 13/25
+Percentage: 52.00 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,0
+lcount:48,0
+lcount:49,0
+lcount:52,0
+lcount:54,0
+lcount:55,0
+lcount:56,0
+lcount:57,0
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,14,flush_gcov
+lcount:11,14
+lcount:12,14
+lcount:13,13
+
+-----------------------------------------------
+Execution: 89
+-----------------------------------------------
+Calls Failed:
+GETC:	1
+WRITE:	2
+
+Coverage
+Lines: 23/27
+Percentage: 85.19 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,1
+lcount:56,1
+lcount:57,1
+lcount:58,0
+lcount:59,0
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,43,flush_gcov
+lcount:11,43
+lcount:12,43
+lcount:13,42
+
+-----------------------------------------------
+Execution: 90
+-----------------------------------------------
+Calls Failed:
+WRITE:	2,3
+
+Coverage
+Lines: 25/27
+Percentage: 92.59 %
+
+file:check-pc.c
+function:14,1,main
+lcount:14,1
+lcount:20,1
+lcount:22,1
+lcount:23,1
+lcount:24,1
+lcount:27,1
+lcount:31,1
+lcount:32,1
+lcount:35,1
+lcount:38,1
+lcount:39,1
+lcount:42,1
+lcount:43,1
+lcount:46,1
+lcount:48,12
+lcount:49,11
+lcount:52,1
+lcount:54,1
+lcount:55,2
+lcount:56,2
+lcount:57,2
+lcount:58,1
+lcount:59,1
+lcount:62,0
+lcount:64,0
+file:cbfi.h
+function:11,48,flush_gcov
+lcount:11,48
+lcount:12,48
+lcount:13,47
+
