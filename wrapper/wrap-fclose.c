@@ -30,8 +30,10 @@ int fclose(FILE *stream){
             }
         }
         free(numbers); // release memory
-        if (error == -1) // check if call is to be failed
+        if (error == -1) {
+            errno = EIO;
             return EOF;
+        }
     }
     orig_fclose_type orig_fclose;
     orig_fclose = (orig_fclose_type)dlsym(RTLD_NEXT, "fclose");
