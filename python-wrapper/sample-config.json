@@ -3,5 +3,5 @@
 	"EXECUTABLE":"../tests/sid-test",
 	"ARGUMENTS":"",
 	"FAIL_CALLS":["FPUTC","FOPEN"],
-	"LIBRARY_PATH":"../final-wrapper/wraplib.so"
+	"LIBRARY_PATH":"../wrapper/wraplib.so"
 }

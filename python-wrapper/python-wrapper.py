@@ -5,7 +5,6 @@ import sys
 import json
 import subprocess
 from collections import deque
-from sets import Set
 from copy import deepcopy
 
 """
@@ -32,6 +31,7 @@ def get_linecount_string(out, source_file_name, abrupt):
 	top of the gcov data and the header file lines would be at the bottom.
 	So we would be stopping when he encounter an .h file in the report
 	"""
+	write_to_file()
 	process = False
 	exec_count = ""
 	for line in out:
@@ -44,14 +44,17 @@ def get_linecount_string(out, source_file_name, abrupt):
 			break
 	return exec_count
 
+def write_to_file():
+
+
 
 def should_not_proceed(coverage_dict):
 
 	call_fail_dict = coverage_dict['calls']
 	cov_str = coverage_dict['coverage']
 
-	print call_fail_dict
-	print cov_str
+	#print call_fail_dict
+	#print cov_str
 
 	for exec_dict in storage_of_execution:
 		not_proceed = True
@@ -66,6 +69,23 @@ def should_not_proceed(coverage_dict):
 
 	return False
 
+def is_repeated_execution(fail_call_dict):
+
+	#print fail_call_dict
+
+	for exec_dict in storage_of_execution:
+		repeated = True
+		for call, calls_fails in fail_call_dict.iteritems():
+			if call not in exec_dict['calls']:
+				repeated = False
+			elif call in exec_dict['calls'] and calls_fails != exec_dict['calls'][call] :
+				repeated = False
+
+		if repeated:
+			return True
+
+	return False
+
 
 def create_new_call_fail_dictionary(calls_failed, call, current_max_call):
 
@@ -73,7 +93,7 @@ def create_new_call_fail_dictionary(calls_failed, call, current_max_call):
 	if call in new_call_fail_dict:
 		new_call_fail_dict[call].add(current_max_call)
 	else:
-		new_call_fail_dict[call] = Set([current_max_call])
+		new_call_fail_dict[call] = set([current_max_call])
 
 	return new_call_fail_dict
 
@@ -96,7 +116,7 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 
 	gdbmi.write('set environment LD_PRELOAD={0}'.format(library), read_response=False)
 
-	print "\n",call_fail_dict
+	#print "\n",call_fail_dict
 
 	for call, fail_nums in call_fail_dict.iteritems():
 		#We will be setting the environment variables for failing libc calls over here
@@ -174,7 +194,9 @@ libc_mapping = {
 	'OPEN': 'OPEN_FAIL',
 	'FGETC': 'FGETC_FAIL',
 	'MALLOC': 'MALLOC_FAIL',
-	'FPUTC':'FPUTC_FAIL'
+	'FPUTC':'FPUTC_FAIL',
+	'READ':'READ_FAIL',
+	'WRITE':'WRITE_FAIL'
 }
 
 
@@ -182,7 +204,11 @@ if __name__ == "__main__":
 
 	global library
 	global storage_of_execution
+	global current_run
+	global file_testcase 
 	storage_of_execution = []
+	d = datetime.datetime.now()
+	file_testcase = str(d).split('.')[0]
 
 	if len(sys.argv) < 2:
 		print "Usage: python python-wrapper <config.json>"
@@ -229,7 +255,9 @@ if __name__ == "__main__":
 
 			call_num_to_fail += 1
 
-			call_fail_dict = {		call_to_fail:Set([call_num_to_fail])		}
+			call_fail_dict = {		call_to_fail:set([call_num_to_fail])		}
+
+			print "\n",call_fail_dict
 
 			exec_string, abrupt, error_lineno = do_processing(executable, arguments, \
 				source_file_name, source_file_path, call_fail_dict)
@@ -287,6 +315,12 @@ if __name__ == "__main__":
 				current_max_call += 1
 
 				new_call_fail_dict = create_new_call_fail_dictionary(calls_failed, call, current_max_call)
+				print "\n",new_call_fail_dict
+				repeat = is_repeated_execution(new_call_fail_dict)
+
+				if repeat:
+					print "Repeated"
+					break
 				
 				exec_string, abrupt, error_lineno = do_processing(executable, arguments, source_file_name, source_file_path, new_call_fail_dict)
 
@@ -301,6 +335,10 @@ if __name__ == "__main__":
 				}
 
 				if should_not_proceed(coverage_dict):
+					lines = len(exec_string)
+					zeroes = exec_string.count('0')
+					coverage = (lines - zeroes) / lines
+					print lines, zeroes, coverage
 					print "Not adding"
 					storage_of_execution.append(coverage_dict)
 					break
@@ -323,6 +361,5 @@ if __name__ == "__main__":
 
 				current_run += 1
 
-	print "\nQueue:",queue
 	print "\nTotal Executions:", len(storage_of_execution)
 	print "\nCheck lines:", error_lines
