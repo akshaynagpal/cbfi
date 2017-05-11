@@ -45,13 +45,18 @@ int btrace_has_gcov(void) {
     int array_len = 20;
     void *array[array_len];
     int size_on_stack = backtrace(array, array_len);
-    char* gcov_flush_string = "gcov_flush";
-    char** backtrace_list = backtrace_symbols(array,size_on_stack);
+    char* gcov_flush_string = "flush_gcov";
+    char* bin_bash_string = "/bin/bash";
+    char** backtrace_list = backtrace_symbols(array, size_on_stack);
+    
+    //backtrace_symbols_fd(array, size_on_stack, 1);
+
     int ret = 0;
     // check if gcov_flush is calling
     for (int i = 0; i < size_on_stack; i++)
     {
-        if(strstr(backtrace_list[i], gcov_flush_string)!=NULL){
+        if(strstr(backtrace_list[i], gcov_flush_string) != NULL ||
+            strstr(backtrace_list[i], bin_bash_string) != NULL ){
             ret = 1;  // gcov flush is calling, so skip
             break;
         }

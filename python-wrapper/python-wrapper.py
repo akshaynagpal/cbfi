@@ -8,6 +8,7 @@ from collections import deque
 from copy import deepcopy
 import datetime
 import os
+import shutil
 
 """
 Using pygdbmi.

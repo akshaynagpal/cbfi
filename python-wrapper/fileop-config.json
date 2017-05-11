@@ -1,0 +1,7 @@
+{
+	"SOURCE_FILE_PATH":"../tests/file-open-close.c",
+	"EXECUTABLE":"../tests/file-open-close",
+	"ARGUMENTS":"",
+	"FAIL_CALLS":["FOPEN","FCLOSE","OPEN","CLOSE"],
+	"LIBRARY_PATH":"../wrapper/wraplib.so"
+}
