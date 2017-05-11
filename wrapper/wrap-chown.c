@@ -27,8 +27,10 @@ int chown (const char *path, uid_t owner, gid_t group) {
             }
         }
         free(numbers); // release memory
-        if (error == -1) // check if call is to be failed
+        if (error == -1){
+            errno = ENOENT;
             return -1;
+        }
     }
 
     // normal chown
