@@ -236,7 +236,7 @@ if __name__ == "__main__":
 	fail_calls = config_json['FAIL_CALLS']
 	calls_to_fail = []
 	for call in fail_calls:
-		calls_to_fail.append("%s_FAIL" % call)
+		calls_to_fail.append("%s_FAIL" % call.upper())
 		# calls_to_fail.append(libc_mapping[call])
 	source_file_path = config_json['SOURCE_FILE_PATH']
 	source_file_name = source_file_path.split("/")[-1]
