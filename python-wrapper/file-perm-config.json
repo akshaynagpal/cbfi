@@ -1,0 +1,7 @@
+{
+	"SOURCE_FILE_PATH":"../tests/file-perm.c",
+	"EXECUTABLE":"../tests/file-perm",
+	"ARGUMENTS":"",
+	"FAIL_CALLS":["CHDIR","CHMOD","CHOWN"],
+	"LIBRARY_PATH":"../wrapper/wraplib.so"
+}

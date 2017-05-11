@@ -215,22 +215,12 @@ def do_processing(executable, arguments, source_file_name, source_file_path, cal
 	exec_string = get_linecount_string(gcovdata, source_file_name, abrupt, call_fail_dict)
 
 	# Delete gcda file
-	subprocess.call(['rm', '{0}.{1}'.format(source_file_path[:-2],'gcda')])
+	subprocess.call(['rm', '-f', '{0}.{1}'.format(source_file_path[:-2],'gcda')])
 
 	# Delete gcov file
-	subprocess.call(['rm', '{0}.{1}'.format(source_file_name,'gcov')])
+	subprocess.call(['rm', '-f', '{0}.{1}'.format(source_file_name,'gcov')])
 
 	return (exec_string, abrupt, error_lineno)
-
-libc_mapping = {
-	'FOPEN':'FOPEN_FAIL',
-	'OPEN': 'OPEN_FAIL',
-	'FGETC': 'FGETC_FAIL',
-	'MALLOC': 'MALLOC_FAIL',
-	'FPUTC':'FPUTC_FAIL',
-	'READ':'READ_FAIL',
-	'WRITE':'WRITE_FAIL'
-}
 
 
 if __name__ == "__main__":
@@ -287,12 +277,15 @@ if __name__ == "__main__":
 	if 'PLAYGROUND' in config_json:
 		playground = config_json['PLAYGROUND']
 	
+	# Delete gcda file
+	subprocess.call(['rm', '-f', '{0}.{1}'.format(source_file_path[:-2],'gcda')])
+
+	# Delete gcov file
+	subprocess.call(['rm', '-f', '{0}.{1}'.format(source_file_name,'gcov')])
+
 	current_run = 1
-
 	all_executions = list()
-
 	error_lines = set()
-
 	queue = deque()
 
 	for call_to_fail in calls_to_fail:
@@ -415,7 +408,7 @@ if __name__ == "__main__":
 	with open(file_report,'r+') as report_file:
 		data = report_file.read()
 		report_file.seek(0, 0)
-		report_file.write("Check the following lines of your source program for vulnerabilities:\n")
+		report_file.write("Check the following lines of your source program for errors/unhandled exceptions:\n")
 		report_file.write(",".join(map(str, error_lines))+"\n\n")
 		report_file.write("Total Executions: "+str(len(storage_of_execution))+"\n\n")
 		report_file.write(data)
