@@ -65,6 +65,7 @@ typedef struct
     unsigned long write;
     unsigned long opendir;
     unsigned long mkdir;
+    unsigned long unlink;
 } call_counts;
 
 /**
