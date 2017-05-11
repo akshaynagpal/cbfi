@@ -386,8 +386,8 @@ if __name__ == "__main__":
 				if should_not_proceed(coverage_dict):
 					lines = len(exec_string)
 					zeroes = exec_string.count('0')
-					coverage = (lines - zeroes) / lines * 100
-					print lines, zeroes, coverage
+					coverage = (lines - zeroes) / lines
+					print (lines-zeroes),"/",lines," Coverage:",coverage
 					print "Not adding"
 					storage_of_execution.append(coverage_dict)
 					break
