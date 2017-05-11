@@ -51,7 +51,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
 - ~~memcmp~~   [COREUTIL] // memcmp does not fails so return global_counts.memcmp to simulate incorrect answer
 
-- mkdir
+- ~~mkdir~~
 - mount - (temporary)
 
 - ~~open~~   [COREUTIL]
@@ -68,7 +68,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - remove
 - rename
 - recv
-- rmdir
+- ~~rmdir~~
 
 - scanf
 - sched_getaffinity

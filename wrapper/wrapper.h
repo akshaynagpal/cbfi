@@ -59,6 +59,7 @@ typedef struct
     unsigned long putc;
     unsigned long puts;
     unsigned long read;
+    unsigned long rmdir;
     unsigned long system;
     unsigned long write;
     unsigned long opendir;
