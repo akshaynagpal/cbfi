@@ -1,6 +1,6 @@
 https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 
-- ~~calloc~~
+- calloc
 - ~~chdir~~		
 - ~~chmod~~			
 - ~~chown~~	
@@ -65,7 +65,6 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - ~~puts~~   [COREUTIL]
 
 - ~~read~~
-- remove
 - rename
 - recv
 - ~~rmdir~~
@@ -80,6 +79,7 @@ https://www.gnu.org/software/libc/manual/html_node/Function-Index.html
 - umask
 - umount
 - umount2
+- unlink
 
 - wait
 - waitpid

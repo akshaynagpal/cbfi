@@ -16,7 +16,7 @@ Added python wrapper
      find . -name "*.gcno" -type f -delete
 
 3. `cd coreutils`
-4. `./configure CFLAGS="-g --coverage -rdynamic -O0"`
+4. `./configure CFLAGS="-g --coverage -rdynamic -O0 -fno-builtin"`
 5. `make`
 7. Coreutils executables will be in `/absolute/path/to/some/folder/src`
 8. `rm *.gcda` before each run of a coreutils executable
