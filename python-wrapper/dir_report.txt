@@ -1,0 +1,368 @@
+Check the following lines of your source program for errors/unhandled exceptions: 16,17,19,20
+
+
+Total Executions: 12
+
+-----------------------------------------------
+Execution: 1
+-----------------------------------------------
+Calls Failed:
+OPENDIR:	1
+
+Coverage
+Lines: 9/12
+Percentage: 75.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,1
+lcount:17,1
+lcount:18,2
+lcount:19,0
+lcount:20,0
+lcount:23,1
+lcount:27,0
+lcount:29,1
+file:cbfi.h
+function:11,11,flush_gcov
+lcount:11,11
+lcount:12,11
+lcount:13,11
+
+-----------------------------------------------
+Execution: 2
+-----------------------------------------------
+Calls Failed:
+OPENDIR:	2
+
+Coverage
+Lines: 9/12
+Percentage: 75.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,1
+lcount:17,1
+lcount:18,2
+lcount:19,0
+lcount:20,0
+lcount:23,1
+lcount:27,0
+lcount:29,1
+file:cbfi.h
+function:11,11,flush_gcov
+lcount:11,11
+lcount:12,11
+lcount:13,11
+
+-----------------------------------------------
+Execution: 3
+-----------------------------------------------
+Calls Failed:
+MKDIR:	1
+
+Coverage
+Lines: 6/12
+Percentage: 50.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,0
+lcount:17,0
+lcount:18,0
+lcount:19,0
+lcount:20,0
+lcount:23,0
+lcount:27,1
+lcount:29,1
+file:cbfi.h
+function:11,7,flush_gcov
+lcount:11,7
+lcount:12,7
+lcount:13,7
+
+-----------------------------------------------
+Execution: 4
+-----------------------------------------------
+Calls Failed:
+MKDIR:	2
+
+Coverage
+Lines: 6/12
+Percentage: 50.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,0
+lcount:17,0
+lcount:18,0
+lcount:19,0
+lcount:20,0
+lcount:23,0
+lcount:27,1
+lcount:29,1
+file:cbfi.h
+function:11,7,flush_gcov
+lcount:11,7
+lcount:12,7
+lcount:13,7
+
+-----------------------------------------------
+Execution: 5
+-----------------------------------------------
+Calls Failed:
+RMDIR:	1
+
+Coverage
+Lines: 10/12
+Percentage: 83.33 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,1
+lcount:17,1
+lcount:18,2
+lcount:19,1
+lcount:20,1
+lcount:23,0
+lcount:27,0
+lcount:29,1
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,12
+
+-----------------------------------------------
+Execution: 6
+-----------------------------------------------
+Calls Failed:
+RMDIR:	2
+
+Coverage
+Lines: 10/12
+Percentage: 83.33 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,1
+lcount:17,1
+lcount:18,2
+lcount:19,1
+lcount:20,1
+lcount:23,0
+lcount:27,0
+lcount:29,1
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,12
+
+-----------------------------------------------
+Execution: 7
+-----------------------------------------------
+Calls Failed:
+OPENDIR:	1,2
+
+Coverage
+Lines: 9/12
+Percentage: 75.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,1
+lcount:17,1
+lcount:18,2
+lcount:19,0
+lcount:20,0
+lcount:23,1
+lcount:27,0
+lcount:29,1
+file:cbfi.h
+function:11,11,flush_gcov
+lcount:11,11
+lcount:12,11
+lcount:13,11
+
+-----------------------------------------------
+Execution: 8
+-----------------------------------------------
+Calls Failed:
+OPENDIR:	1
+MKDIR:	1
+
+Coverage
+Lines: 6/12
+Percentage: 50.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,0
+lcount:17,0
+lcount:18,0
+lcount:19,0
+lcount:20,0
+lcount:23,0
+lcount:27,1
+lcount:29,1
+file:cbfi.h
+function:11,7,flush_gcov
+lcount:11,7
+lcount:12,7
+lcount:13,7
+
+-----------------------------------------------
+Execution: 9
+-----------------------------------------------
+Calls Failed:
+OPENDIR:	1
+RMDIR:	1
+
+Coverage
+Lines: 9/12
+Percentage: 75.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,1
+lcount:17,1
+lcount:18,2
+lcount:19,0
+lcount:20,0
+lcount:23,1
+lcount:27,0
+lcount:29,1
+file:cbfi.h
+function:11,11,flush_gcov
+lcount:11,11
+lcount:12,11
+lcount:13,11
+
+-----------------------------------------------
+Execution: 10
+-----------------------------------------------
+Calls Failed:
+MKDIR:	1,2
+
+Coverage
+Lines: 6/12
+Percentage: 50.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,0
+lcount:17,0
+lcount:18,0
+lcount:19,0
+lcount:20,0
+lcount:23,0
+lcount:27,1
+lcount:29,1
+file:cbfi.h
+function:11,7,flush_gcov
+lcount:11,7
+lcount:12,7
+lcount:13,7
+
+-----------------------------------------------
+Execution: 11
+-----------------------------------------------
+Calls Failed:
+MKDIR:	1
+RMDIR:	1
+
+Coverage
+Lines: 6/12
+Percentage: 50.00 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,0
+lcount:17,0
+lcount:18,0
+lcount:19,0
+lcount:20,0
+lcount:23,0
+lcount:27,1
+lcount:29,1
+file:cbfi.h
+function:11,7,flush_gcov
+lcount:11,7
+lcount:12,7
+lcount:13,7
+
+-----------------------------------------------
+Execution: 12
+-----------------------------------------------
+Calls Failed:
+RMDIR:	1,2
+
+Coverage
+Lines: 10/12
+Percentage: 83.33 %
+
+file:dir-test.c
+function:11,1,main
+lcount:11,1
+lcount:13,1
+lcount:14,1
+lcount:15,1
+lcount:16,1
+lcount:17,1
+lcount:18,2
+lcount:19,1
+lcount:20,1
+lcount:23,0
+lcount:27,0
+lcount:29,1
+file:cbfi.h
+function:11,12,flush_gcov
+lcount:11,12
+lcount:12,12
+lcount:13,12
+
