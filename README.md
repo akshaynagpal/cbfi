@@ -1,24 +1,2 @@
 # Coverage Based Fault Injection
-Coverage based fault injection.
-Added python wrapper
-
-
-# Compiling coreutils-8.27 with gcov
-1. Unzip/uncompress coreutils-8.27.tar.xz into a folder
-2. Rename folder to `coreutils`
-
-
-#### Danger
-     ##### recursive delete gcda files
-     find . -name "*.gcda" -type f -delete
-
-     ##### recursive delete gcno files from all folders
-     find . -name "*.gcno" -type f -delete
-
-3. `cd coreutils`
-4. `./configure CFLAGS="-g --coverage -rdynamic -O0 -fno-builtin"`
-5. `make`
-7. Coreutils executables will be in `/absolute/path/to/some/folder/src`
-8. `rm *.gcda` before each run of a coreutils executable
-9. `gcov -i executable.c` to generate gcov of a coreutil such as cat, ls etc
-
+Code coverage is one of the most important parameters         for achieving robust software testing and design, however        achieving the same is almost impossible given the        limitations in testing scenarios. One such scenario is        simulating environment faults for the application under       test. In this report we present a prototype implementation         of ​Coverage Based Fault Injection (CBFI)[7], to test        programs for errors caused due to faulty or malicious         underlying hardware, operating system and other related       components. In this approach CBFI[7] is implemented as        a coverage based fuzzer with ​dynamically linked library        that wraps around existing GNU libc calls and permutes         fault injections to fail a set of libc calls and test the            program robustness as well as susceptibility to       vulnerabilities due to unhandled exceptions or crashes at        runtime. Our work is inspired and extends the previous         work on fault injections, specifically that presented in        Vulnerability Testing of Software System Using Fault       Injection[1] and Libfaultinj[2]. 
