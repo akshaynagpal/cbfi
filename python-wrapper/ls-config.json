@@ -2,6 +2,6 @@
 	"SOURCE_FILE_PATH":"../coreutils/src/ls.c",
 	"EXECUTABLE":"../coreutils/src/ls",
 	"ARGUMENTS":"~/Desktop",
-	"FAIL_CALLS":["MEMCPY"],
+	"FAIL_CALLS":["CHDIR","CHMOD","GETS","GETC","PUTS","PUTC","CLOSE","OPEN","READ","WRITE"],
 	"LIBRARY_PATH":"../wrapper/wraplib.so"
 }
